@@ -1,0 +1,171 @@
+
+header h1 {
+    font-size: 25px;
+    font-weight: 100;
+    align-self: center;
+}
+
+header {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    gap: 12px;
+    padding: 5px 20px 5px 60px;
+    align-items: center;
+    background-color: black;
+    color: white;
+    position: fixed;
+    z-index: 1000;
+}
+
+ul {
+    display: flex;
+}
+
+.nav-links {     
+    text-decoration: none;
+    margin-right: 20px;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-section {
+    display: flex;
+    justify-content: space-between ;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+/* #nav-links.mobile-open li.accordion-item {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+} */
+
+/* nav ul li select {
+    border: none;
+} */
+
+.nav-right-side-section {
+    /* margin-left: auto; */
+    display: flex;
+    align-items: center;
+    padding-left: 490px;
+
+}
+
+.nav-right-side-section button {
+    margin-right: 20px;
+}
+
+.nav-right-side-section a {
+    text-decoration: none;
+    color: white;
+}
+
+.eng-button {
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.eng-button:hover {
+    background-color: rgb(47, 45, 45);
+}
+
+.signup-button {
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-button:hover {
+    background-color: rgb(234, 230, 230);
+}
+
+/* #about-nav {
+    width: 55%;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+} */
+
+/* #about-nav:hover {
+    background-color: rgb(47, 45, 45);
+} */
+
+.about-nav-header {
+    font-weight: bold;
+}
+
+.about-nav-header:hover {
+    background-color: rgb(47, 45, 45);
+}
+
+/* select option {
+    background-color: white;
+    color: black;
+} */
+
+.nav-links:hover {
+   background-color: rgb(47, 45, 45);
+}
+
+.nav-side-links {
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 20px;
+    flex: 1;
+}
+
+.nav-log-button {
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 20px;
+}
+
+.nav-side-links:hover {
+    background-color: rgb(47, 45, 45);
+}
+
+.mobile-button {
+    display: none;
+    background-color: black;
+    color: white;
+    border: none;
+
+}
+
+.nav-left-side-section {
+    display: flex;
+    text-align: center;
+}
+
+.accordion-toggle {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.accordion-toggle:hover {
+    background-color: rgb(47, 45, 45);
+}
+
+
