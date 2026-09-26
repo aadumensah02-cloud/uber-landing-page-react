@@ -1,0 +1,14 @@
+.app-section {
+    background-color: #f6f6f6;
+    padding: 66px 130px;
+}
+
+.qr-section {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.app-section h2 {
+    font-size: 30 px;
+} 

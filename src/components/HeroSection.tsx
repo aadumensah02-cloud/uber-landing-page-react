@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
                            <a href="#">Change city</a>
                         </div>
 
-                        <h1>Go anywhere with  Uber</h1>
+                        <h1>Go anywhere with <br />Uber</h1>
 
                         <select name="pickup" id="pickup">
                             <option value="#" className="pickup-options-header" hidden>Pickup now</option>

@@ -1,0 +1,33 @@
+.city-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 97px;
+}
+
+.city-text {
+    padding: 39px;
+}
+
+.city-section img {
+    width: 540px;
+}
+
+.city-text h2 {
+    font-size: 37px;
+}
+
+.city-text p {
+    font-size: 17px;
+    line-height: 23px;
+    color: rgb(63, 63, 63);
+}
+
+.city-text button {
+    padding: 15px 47px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
+}

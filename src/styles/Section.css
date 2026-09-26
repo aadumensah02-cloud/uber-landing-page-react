@@ -1,0 +1,73 @@
+.section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 140px;
+    align-items: center;
+    /* width: 78%; */
+}
+
+.section-reverse {
+  flex-direction: row-reverse;
+}
+
+
+.section-title {
+    font-size: 35px;
+}
+
+.section-reverse .section-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 150px;
+}
+
+.section-reverse .section-text {
+  padding-right: 20px;
+  padding-left: 220px;
+  padding-left: 150px;
+}
+
+
+.section-icon {
+    width: 560px;
+}
+
+
+.section-description {
+    font-size: 17px;
+    line-height: 23px;
+    color: rgb(63, 63, 63);
+}
+
+.section-button {
+    font-size: 17px;
+    padding: 13px 19px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    border: none;
+    margin-top: 15px;
+}
+
+.section-button:hover {
+  background-color: rgb(47, 45, 45);
+}
+
+.section-link {
+    margin-left: 20px;
+    color: black;
+    text-underline-offset: 8px;
+    margin-left: 20px;
+    color: black;
+    text-decoration-color: #e6e6e6;
+    transition: text-decoration-color 0.5s ease;
+}
+
+.section-link:hover {
+    text-decoration-color: black;
+}
+
+.section-lower {
+    display: flex;
+}

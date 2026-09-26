@@ -1,0 +1,44 @@
+.qr-content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20px;
+    /* padding-left: 20px;
+    padding-right: ; */
+    background-color: white;
+}
+
+.qr-img {
+    width: 170px;
+}
+
+.qr-arrow {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+}
+
+.qr-text {
+    display: flex;
+    padding: 20px;
+    
+}
+
+.qr-title {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.qr-description {
+    color: black;
+    text-decoration: none;
+    margin-top: 0; 
+}
+
+.qr-left {
+    padding-right: 50px;
+}
+
+a {
+  text-decoration: none;  
+}

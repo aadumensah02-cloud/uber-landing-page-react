@@ -1,0 +1,56 @@
+.login-section {
+    display: flex;
+    margin-top: 120px;
+    gap: 40px;
+}
+
+.log-in-text {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 30px;
+    width: 45%;
+}
+
+.log-in-text h2 {
+    font-size: 37px; 
+    margin-bottom: 0; 
+}
+
+.log-in-text p {
+    font-size: 16px;
+    margin-top: 29px;
+    color: rgb(32, 31, 31);
+}
+
+.log-in-text button {
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.log-in-text a {
+    text-underline-offset: 8px;
+    margin-left: 20px;
+    color: black;
+    text-decoration-color: #f6f6f6;
+    transition: text-decoration-color 0.5s ease;
+} 
+
+.log-in-text a:hover {
+    text-decoration-color: black;
+}
+
+.log-in-button {
+    margin-top: 20px;
+    
+}
+
+.log-in-text button:hover {
+    background-color: rgb(47, 45, 45);
+}

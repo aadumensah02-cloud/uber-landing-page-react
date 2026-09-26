@@ -1,0 +1,15 @@
+.service-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 1.5rem;
+    
+}
+
+.service-options {
+    padding-top: 30px;
+    padding-left: 40px;
+}
+
+.service-options h2 {
+    font-size: 35px;
+}
