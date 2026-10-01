@@ -1,0 +1,118 @@
+.footer-section {
+    background-color: black;
+    padding: 100px 100px;
+    padding-bottom:px;
+}
+
+.uber-content { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.uber-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.uber-link {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: white;
+}
+
+.uber-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section span {
+    color: white;
+    font-size: 19px;
+    margin-top: 105px;
+    margin-bottom: 19px;
+}
+
+.uber-section a {
+    padding: 10px;
+    padding-left: 0;
+}
+
+.uber-section a:hover {
+    color: #949494;
+}
+
+.uber-terms {
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 50px; */
+}
+
+.uber-buttons {
+    text-align: right;
+    margin-bottom: 70px;
+}
+
+.uber-buttons button{
+    padding: 8px 22px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.uber-buttons button:hover {
+    background-color: #1d1c1c;
+}
+
+.uber-terms span {
+    font-size: 12px;
+    color: #a3a0a0;
+}
+
+.uber-terms a {
+    font-size: 12px;
+    color: #a3a0a0;
+    margin-left: 20px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 28px;
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+.footer-social a {
+    color: white;
+}
+
+.footer-locale {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-locale button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 56px;
+}

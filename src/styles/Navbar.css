@@ -1,16 +1,18 @@
 
 header h1 {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 100;
     align-self: center;
 }
 
 header {
+    top: 0;
+    left: 0;
     width: 100%;
     box-sizing: border-box;
     display: flex;
     gap: 12px;
-    padding: 5px 20px 5px 60px;
+    padding: 5px 60px;
     align-items: center;
     background-color: black;
     color: white;
@@ -22,11 +24,13 @@ ul {
     display: flex;
 }
 
-.nav-links {     
+.nav-links {
+    align-self: center;
+    font-size: 14px;    
     text-decoration: none;
     margin-right: 20px;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 10px;
     border-radius: 20px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -56,12 +60,12 @@ nav ul li {
     /* margin-left: auto; */
     display: flex;
     align-items: center;
-    padding-left: 490px;
+    padding-left: 350px;
 
 }
 
 .nav-right-side-section button {
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
 .nav-right-side-section a {
@@ -70,6 +74,7 @@ nav ul li {
 }
 
 .eng-button {
+    font-size: 13px;
     padding: 10px 15px;
     border-radius: 20px;
     background-color: black;
@@ -82,7 +87,8 @@ nav ul li {
 }
 
 .signup-button {
-    padding: 10px 15px;
+    font-size: 13px;
+    padding: 10px 12px;
     border-radius: 20px;
     background-color: white;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -123,7 +129,8 @@ nav ul li {
    background-color: rgb(47, 45, 45);
 }
 
-.nav-side-links {
+.nav-help-button {
+    font-size: 13px;
     padding: 10px 15px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     border-radius: 20px;
@@ -132,11 +139,16 @@ nav ul li {
 
 .nav-log-button {
     padding: 10px 15px;
+    font-size: 13px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     border-radius: 20px;
 }
 
-.nav-side-links:hover {
+.nav-log-button:hover {
+    background-color: rgb(47, 45, 45);
+}
+
+.nav-help-button:hover {
     background-color: rgb(47, 45, 45);
 }
 
@@ -154,18 +166,45 @@ nav ul li {
 }
 
 .accordion-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
     background-color: black;
     color: white;
     border: none;
-    font-size: 15px;
-    padding: 10px 15px;
+    font-size: 13px;
+    padding: 10px 10px;
     border-radius: 20px;
+    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 
 }
 
 .accordion-toggle:hover {
     background-color: rgb(47, 45, 45);
+}
+
+.chevron {
+    color: white;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+    filter: invert(1);
+}
+
+.nav-links,
+.nav-side-links,
+.nav-log-button,
+.signup-button,
+.eng-button {
+    white-space: nowrap;
+}
+
+nav ul li,
+.nav-right-side-section {
+    flex-shrink: 0;
 }
 
 

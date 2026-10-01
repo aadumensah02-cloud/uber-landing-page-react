@@ -1,0 +1,58 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    
+}
+
+.modal {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    width: 300px;
+
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.order-input {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.order-input input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.order-button {
+    padding: 10px 110px;
+    width: 100%;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    
+}
+
+.input-modal {
+    margin-bottom: 10px;
+    font-weight: bold;
+}

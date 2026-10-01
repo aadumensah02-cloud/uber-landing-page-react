@@ -1,12 +1,12 @@
 .app-section {
     background-color: #f6f6f6;
-    padding: 66px 130px;
+    padding: 66px 60px;
 }
 
 .qr-section {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 40px;
 }
 
 .app-section h2 {

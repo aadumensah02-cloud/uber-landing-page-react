@@ -6,6 +6,11 @@
     /* width: 78%; */
 }
 
+.section-text {
+    padding-left: 30px;
+    padding-right: 70px;
+}
+
 .section-reverse {
   flex-direction: row-reverse;
 }
@@ -38,6 +43,7 @@
     font-size: 17px;
     line-height: 23px;
     color: rgb(63, 63, 63);
+    padding-right: 30px;
 }
 
 .section-button {
@@ -55,6 +61,7 @@
 }
 
 .section-link {
+    text-decoration: underline;
     margin-left: 20px;
     color: black;
     text-underline-offset: 8px;

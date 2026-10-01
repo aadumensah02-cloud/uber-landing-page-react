@@ -1,4 +1,5 @@
 import './App.css';
+import '../src/styles/global.css';
 import Navbar from './components/Navbar.tsx'; 
 import HeroSection from './components/HeroSection.tsx';
 import ServiceOptions from './components/ServiceOptions.tsx';
@@ -8,6 +9,7 @@ import CitySection from './components/CitySection.tsx';
 import DriveSection from './components/DriveSection.tsx';
 import BusinessSection from './components/BusinessSectiom.tsx';
 import AppDownloadSection from './components/AppDownloadSection.tsx';
+import Footer from './components/Footer.tsx';
 
 function App () {
   return (
@@ -25,6 +27,7 @@ function App () {
         <BusinessSection />
       </div>
       <AppDownloadSection />
+      <Footer />
       
       
 

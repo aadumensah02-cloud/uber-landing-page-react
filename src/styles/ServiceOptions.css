@@ -7,9 +7,30 @@
 
 .service-options {
     padding-top: 30px;
-    padding-left: 40px;
+    padding-left: 30px;
 }
 
 .service-options h2 {
     font-size: 35px;
+}
+
+p {
+    padding-top: 5px;
+}
+
+.package-modal {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #f3f3f3;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    margin: 4px 0 12px;
+}
+
+.package-modal:focus {
+    outline: 2px solid rgb(208, 205, 205);
 }

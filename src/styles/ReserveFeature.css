@@ -1,5 +1,6 @@
 .reserve-section {
-    margin-top: 90px; 
+    margin-top: 90px;
+    padding-left: 30px; 
 }
 
 .reserve-content {
@@ -60,6 +61,7 @@
 }
 
 .reserve-right a {
+    text-decoration: underline;
     color: #696969;
     text-underline-offset: 8px;
     text-decoration-color: black;
@@ -137,4 +139,72 @@ hr {
   top: 10px;   
   right: 0.3px;      
   z-index: 1;
+}
+
+.reserve-input {
+    display: flex;
+    gap: 10px;
+}
+
+.field-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.field-box input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 56px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+    background: #f6f6f6;
+    font-size: 18px;
+    padding: 0 44px 0 52px;   /* left clears the icon, right clears the caret */
+}
+
+.field-icon {
+    position: absolute;
+    left: 18px;
+    font-size: 18px;
+    pointer-events: none;     /* clicks reach the field underneath */
+}
+
+.field-caret {
+    position: absolute;
+    right: 16px;
+    pointer-events: none;
+}
+
+/* hide the browser's own calendar icon so only yours shows */
+.field-box input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.field-box input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.reserve-text-benefit {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.benefit-icon {
+    color: black;
+    width: 24px;
+    font-size: 24px;
 }

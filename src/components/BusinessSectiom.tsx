@@ -3,7 +3,9 @@ import businessImg from '../img/uber-img9.webp';
 import Section from "./common/Section";
 // import '../styles/BusinessSection.css';
 
+
 const BusinessSection: React.FC = () => {
+
     return (
         <div>
             <div className="business-section">
@@ -29,6 +31,7 @@ const BusinessSection: React.FC = () => {
                   <img src={businesssImg} alt=""/>
                 </div> */}
             </div>
+
         </div>
 
     );

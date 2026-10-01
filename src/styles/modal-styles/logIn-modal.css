@@ -1,0 +1,77 @@
+label {
+    padding: 5px;
+    padding-left: 20px;
+}
+
+.signIn-input {
+    padding: 10px;
+    padding-left: 30px;
+    width: 90%;
+    box-sizing: border-box;
+    height: 52px;
+    border-radius: 8px;
+    font-size: 16px;
+    
+}
+
+.signIn-input input:focus {
+    outline: 2px solid black;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.input-icon {
+    position: absolute;
+    top: 17px;
+    left: 25px;
+    color: #545454;
+    pointer-events: none;      /* clicks reach the input */
+}
+
+.signin-modal-button {
+    padding: 10px 125px;
+    margin-top: 25px;
+    margin-left: 15px;
+    border-radius: 8px;
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0;
+    color: #6b6b6b;
+    font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;                       
+    height: 1px;
+    background: #d9d9d9;
+}
+
+.continue-modal {
+    display: flex;
+    gap: 10px;
+}
+
+.google-button {
+    padding: 10px 10px;
+    background-color: #dddcdf;
+    font-size: 15px;
+    font-weight: 500;
+
+}

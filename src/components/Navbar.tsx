@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/Navbar.css';
+import navImg from "../img/uber-img14.png";
 
 const Navbar: React.FC = () => {
     return (
@@ -24,7 +25,7 @@ const Navbar: React.FC = () => {
                             <li className="accordion-item">
                                 <button className="accordion-toggle">
                                     About
-                                <span className="chevron"> v</span>
+                                <img src={navImg} alt="" className="chevron"/>
                             </button>
                             <ul className="accordion-panel">
                                 {/* <li><a href="#">About us</a></li>
@@ -46,7 +47,7 @@ const Navbar: React.FC = () => {
 
                 <div className="nav-right-side-section">
                     <button className="eng-button">EN</button>
-                    <a href="#" className="nav-side-links">Help</a>
+                    <a href="#" className="nav-help-button">Help</a>
                     <a href="#" className="nav-log-button">Log in</a>
                     <button className="signup-button">Sign up</button>
                 </div>

@@ -2,14 +2,15 @@
     display: flex;
     justify-content: space-between;
     margin-top: 97px;
+    padding-left: 30px;
 }
 
 .city-text {
-    padding: 39px;
+    padding-right: 90px;
 }
 
 .city-section img {
-    width: 540px;
+    width: 590px;
 }
 
 .city-text h2 {
@@ -22,12 +23,38 @@
     color: rgb(63, 63, 63);
 }
 
-.city-text button {
-    padding: 15px 47px;
-    border-radius: 20px;
-    color: white;
-    background-color: black;
+.city-button {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    gap: 10px;
+    width: 110px;
+    background: black;
+    border-radius: 30px;
+    padding: 10px 0px 10px 20px;
+}
+
+
+.city-button button {
+    background: none;
     border: none;
-    font-weight: bold;
-    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+}
+
+.city-icon {
+    filter: brightness(0) invert(1);
+}
+
+.city-chevron {
+    position: absolute;
+    right:12px;
+    top: 49%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: black;
+    pointer-events: none;
+    filter: brightness(0) invert(1);
 }

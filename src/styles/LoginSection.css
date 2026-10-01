@@ -1,14 +1,15 @@
 .login-section {
     display: flex;
     margin-top: 120px;
-    gap: 40px;
+    gap: 20px;
 }
 
 .log-in-text {
     display: flex;
     flex-direction: column;
     align-self: center;
-    padding: 30px;
+    padding-right:90px;
+    padding-left: 30px;
     width: 45%;
 }
 
@@ -35,6 +36,7 @@
 }
 
 .log-in-text a {
+    text-decoration: underline;
     text-underline-offset: 8px;
     margin-left: 20px;
     color: black;
