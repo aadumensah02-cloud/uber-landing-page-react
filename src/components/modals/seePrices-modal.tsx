@@ -1,5 +1,8 @@
 import React from "react";
 import "../../styles/modal-styles/seePrices-modal.css";
+import { useModalFocus } from "../../useModalFocus";
+import { createPortal } from "react-dom";
+// import "../../styles/modal-styles/globalmodal.css";
 
 interface SeePricesModalProps {
     isOpen: boolean;
@@ -8,15 +11,24 @@ interface SeePricesModalProps {
 
 
 const SeePricesModal: React.FC<SeePricesModalProps> = ({isOpen, onClose}) => {
+    const dialogRef = useModalFocus(isOpen, onClose);
+
     // const [isOpen, setIsOpen] = useState(false);
 
     if (!isOpen) return null;
 
-    return (
+    return createPortal (
         <div>
             <div className="overlay" onClick={onClose}>
-                <div className="modal" onClick={(e) => e.stopPropagation()}>
-                    <button className="close-btn" onClick={onClose}>
+                <div
+                    ref={dialogRef}
+                    className="price-modal"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Choose your price"
+                    tabIndex={-1}
+                    onClick={(e) => e.stopPropagation()}>
+                    <button className="price-close-btn" onClick={onClose}>
                         &times;
                     </button>
                     <div className="order-input">
@@ -37,9 +49,11 @@ const SeePricesModal: React.FC<SeePricesModalProps> = ({isOpen, onClose}) => {
                     </div>
 
                 </div>
+                
 
             </div>
-        </div>
+        </div>,
+        document.body
     )
 }
 

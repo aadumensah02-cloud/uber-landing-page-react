@@ -17,16 +17,19 @@ function App () {
       <div className='header-section'>
         <Navbar />
       </div>
-      <div className='text-section'>
-        <HeroSection />
-        <ServiceOptions />
-        <LoginSection />
-        <ReserveFeature />
-        <CitySection />
-        <DriveSection /> 
-        <BusinessSection />
-      </div>
-      <AppDownloadSection />
+      <main>
+        <div className='text-section'>
+          <HeroSection />
+          <ServiceOptions />
+          <LoginSection />
+          <ReserveFeature />
+          <CitySection />
+          <DriveSection /> 
+          <BusinessSection />
+        </div>
+        <AppDownloadSection />
+      </main>
+      
       <Footer />
       
       

@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, {useState, useId} from "react";
 import '../../styles/Section.css';
 import DriveModal from "../modals/drive-modal";
 
@@ -12,14 +12,15 @@ interface SectionProps {
 } 
 
 const Section: React.FC<SectionProps> = ({icon, title, description, buttonText, link, reverse }) => {
+    const titleId = useId();
 
     const [isDriveOpen, setIsDriveOpen] = useState(false);
 
     return (
         <div>
-            <div className={`section ${reverse ? 'section-reverse' : ''}`}>
+            <section className={`section ${reverse ? 'section-reverse' : ''}`} aria-labelledby={titleId}>
                 <div className="section-text">
-                    <h2 className="section-title">{title}</h2>
+                    <h2 id={titleId} className="section-title">{title}</h2>
                     <p className="section-description">{description}</p>
 
                     <div className="Section-lower">
@@ -31,7 +32,7 @@ const Section: React.FC<SectionProps> = ({icon, title, description, buttonText, 
 
                 <img src={icon} alt="" className="section-icon" />
 
-            </div>
+            </section>
             
             <DriveModal isDriveOpen={isDriveOpen} onClose={() => setIsDriveOpen(false)} />
             

@@ -44,8 +44,8 @@
 
 .logo1 {
     padding-right: 70px;
-    width: 455px;
-    max-width: 500px;
+    width: 525px;
+    max-width: 600px;
     position: relative;
     border-radius: 10px;
 }
@@ -99,7 +99,7 @@
     border-radius: 20px;
     width: auto;
     /* width: 130px; */
-    padding: 15px 15px 14px 46px;
+    padding: 15px 29px 14px 46px;
     background-color: #dadada;
     font-weight: bold;
     margin-bottom: 10px;
@@ -149,7 +149,7 @@
 
 .hero-img-text {
     display: flex;
-    gap: 120px;
+    gap: 110px;
     padding: 12px 4px;
     max-width: 78%;
     background: linear-gradient(160deg, #ad7066 0%, #be7b6f 50%, #be7159 100%);

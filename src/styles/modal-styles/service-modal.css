@@ -1,3 +1,8 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
 .overlay {
     position: fixed;
     top: 0;
@@ -12,49 +17,48 @@
     
 }
 
-.modal {
+.service-modal {
     font-family: 'Quicksand', sans-serif;
     background: #fff;
-    padding: 30px;
+    padding: 45px 20px;
     border-radius: 8px;
     position: relative;
-    width: 90%;
-    max-width:360px;
+    max-height: 100vh;
+    overflow-y: hidden;
 
 }
 
-.close-btn {
+.service-close-btn {
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 14px;
+    /* left: 170px; */
     background: none;
     border: none;
     font-size: 20px;
     cursor: pointer;
 }
 
-.modal img {
+.service-modal img {
     border: 1px solid rgb(218, 215, 215);
     border-radius: 10px;
-    margin-left: 90px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
 }
 
-.modal p {
-    display: flex;
-    flex-direction: column;
-    padding-top: 5px;
+
+.service-modal h2 {
+    margin: 12px 0 4px;    
 }
 
-.modal h2 {
-    margin: 12px 0 4px;      /* was much larger */
-}
-
-.modal p {
+.service-modal p {
     margin: 0 0 8px;
     line-height: 1.4;
+    padding-right: 20px;
 }
 
-.modal ul {
+.service-modal ul {
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -64,25 +68,25 @@
     list-style: disc;
 }
 
-.modal li {
+.service-modal li {
     display: list-item;
-    flex-direction: column;
     margin: 0;
     padding: 0;
     line-height: 1.4;
 }
 
-.order-button {
-    padding: 10px 130px;
+.service-modal-button {
+    padding: 10px 172px;
     border-radius: 7px;
     background-color: black;
     color: white;
+    margin-top:15px;
 }
 
-.modal-input {
+.service-modal-input {
     width: 100%;
     box-sizing: border-box;
-    padding: 14px 16px;
+    padding: 14px 18px;
     border: none;
     border-radius: 8px;
     background: #f3f3f3;
@@ -92,12 +96,13 @@
     margin: 4px 0 12px;
 }
 
-.modal-input:focus {
+.service-modal-input:focus {
     outline: 2px solid black;
 }
 
-.modal label {
+.service-modal label {
     display: block;
     font-weight: 500;
     margin-top: 8px;
 }
+

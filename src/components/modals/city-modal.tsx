@@ -1,4 +1,8 @@
 import React from "react";
+// import "../../styles/modal-styles/globalmodal.css";
+import "../../styles/modal-styles/citymodal.css";
+import { useModalFocus } from "../../useModalFocus";
+import { createPortal } from "react-dom";
 
 interface CityModalProps {
     isCityOpen: boolean;
@@ -8,18 +12,25 @@ interface CityModalProps {
 
 const CityModal: React.FC<CityModalProps> = ({isCityOpen, onClose}) => {
     // const [isOpen, setIsOpen] = useState(false);
-
+    const dialogRef = useModalFocus(isCityOpen, onClose);
     if (!isCityOpen) return null;
 
-    return (
+    return createPortal(
         <div>
             <div className="overlay" onClick={onClose}>
-                <div className="modal" onClick={(e) => e.stopPropagation()}>
+                <div
+                    ref={dialogRef}
+                    className="city-modal"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Choose your location"
+                    tabIndex={-1}
+                    onClick={(e) => e.stopPropagation()}>
                     <button className="close-btn" onClick={onClose}>
                         &times;
                     </button>
 
-                   <div className="order-input">
+                    <div className="order-input">
                         <label htmlFor="Pickup-Location" className="input-modal">Pickup Location:</label>
                         <input type="text" placeholder="Enter pickup location" />
 
@@ -37,9 +48,9 @@ const CityModal: React.FC<CityModalProps> = ({isCityOpen, onClose}) => {
                     </div>
 
                 </div>
-
             </div>
-        </div>
+        </div>,
+        document.body
     )
 }
 

@@ -1,16 +1,74 @@
-label {
-    padding: 5px;
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    
+}
+
+.login-modal {
+    font-family: 'Quicksand', sans-serif;
+    background: #fff;
+    padding: 17px 35px;
+    border-radius: 8px;
+    position: relative;
+    height: 95vh;
+    max-height: 100vh;
+    overflow-y: hidden;
+
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    /* left: 170px; */
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.login-modal h2 {
+    margin: 9px 0 20px;    
+}
+
+.login-modal p {
+    margin: 0 0 8px;
+    line-height: 1.4;
+    padding-right: 20px;
+}
+
+.login-modal label {
+    color: black;
+    padding: 12px;
     padding-left: 20px;
+} 
+
+ h2{
+    color: black;
 }
 
 .signIn-input {
     padding: 10px;
-    padding-left: 30px;
-    width: 90%;
+    padding-left: 40px;
+    width: 100%;
     box-sizing: border-box;
     height: 52px;
     border-radius: 8px;
     font-size: 16px;
+    margin-top: 7px;
     
 }
 
@@ -29,16 +87,15 @@ label {
 
 .input-icon {
     position: absolute;
-    top: 17px;
-    left: 25px;
+    top: 24px;
+    left: 15px;
     color: #545454;
     pointer-events: none;      /* clicks reach the input */
 }
 
 .signin-modal-button {
-    padding: 10px 125px;
+    padding: 10px 166px;
     margin-top: 25px;
-    margin-left: 15px;
     border-radius: 8px;
     color: white;
     background-color: black;
@@ -67,11 +124,13 @@ label {
     display: flex;
     gap: 10px;
 }
-
+.continue-modal button {
+    width: 200px;
+}
 .google-button {
     padding: 10px 10px;
     background-color: #dddcdf;
     font-size: 15px;
     font-weight: 500;
 
-}
+} 

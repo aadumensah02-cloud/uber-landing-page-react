@@ -35,7 +35,7 @@ const services: Service[] = [
         icon: reserveIcon,
         title: "Reserve",
         description: "Reserve a ride in advance so you can relax on the day of your trip",
-        details: <p>Book up to 90 days ahead and cancel free up to 60 minutes before pickup.</p>,
+        details: <p>Book up to 90 days ahead and cancel free up to 60 minutes.</p>,
         buttonText:('Order a ride'),
     },
     {
@@ -66,8 +66,8 @@ const ServiceOptions: React.FC = () => {
 
     return (
         <div>
-            <div className="service-options">
-                <h2>Explore what you can do with Uber</h2>
+            <section className="service-options" aria-labelledby="service-options-title">
+                <h2 id="service-options-title">Explore what you can do with Uber</h2>
 
                 <div className="service-cards">
                     {services.map((s) => (
@@ -81,7 +81,7 @@ const ServiceOptions: React.FC = () => {
                         />
                     ))}
                 </div>
-            </div>
+            </section>
 
             <ServiceModal service={selected} onClose={() => setSelected(null)} />
         </div>

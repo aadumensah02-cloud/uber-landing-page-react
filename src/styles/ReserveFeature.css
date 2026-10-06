@@ -10,8 +10,8 @@
     flex-wrap: wrap;
 }
 
-.reserve-section span {
-    color: #636060;
+.reserve-section label {
+    color: #302c2c;
 }
 
 .reserve-section h2 {
@@ -40,7 +40,7 @@
     border-radius: 20px;
     flex: 1;
     min-width: 300px;
-    height: 300px;
+    height: 410px;
 }
 
 .reserve-right {
@@ -48,7 +48,6 @@
     border-radius: 20px;
     padding: 15px 20px;
     padding-left:30px;
-    margin-bottom: 70px;
     flex: 1;
     min-width: 280px;
 
@@ -56,7 +55,7 @@
 
 .reserve-right-text {
     margin-left: 40px;
-    color: rgb(90, 89, 89);
+    color: rgb(52, 46, 46);
 
 }
 
@@ -162,7 +161,8 @@ hr {
     border-radius: 8px;
     background: #f6f6f6;
     font-size: 18px;
-    padding: 0 44px 0 52px;   /* left clears the icon, right clears the caret */
+    padding: 0 44px 0 52px;
+    color: #444040;   
 }
 
 .field-icon {
@@ -208,3 +208,4 @@ hr {
     width: 24px;
     font-size: 24px;
 }
+

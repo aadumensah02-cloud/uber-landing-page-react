@@ -10,7 +10,7 @@
 }
 
 .city-section img {
-    width: 590px;
+    width: 550px;
 }
 
 .city-text h2 {
@@ -21,6 +21,7 @@
     font-size: 17px;
     line-height: 23px;
     color: rgb(63, 63, 63);
+    padding-right: 90px;
 }
 
 .city-button {
@@ -28,14 +29,24 @@
     position: relative;
     align-items: center;
     gap: 10px;
-    width: 110px;
+    width: 130px;
     background: black;
     border-radius: 30px;
-    padding: 10px 0px 10px 20px;
+    /* padding: 10px 0px 10px 20px; */
+}
+
+.city-button:focus-within {    
+  outline: 2px solid #276ef1;
+  outline-offset: 3px;            
+}
+
+.city-button button:focus-visible {
+  outline: none;
 }
 
 
 .city-button button {
+    padding: 8px 28px 8px 10px;
     background: none;
     border: none;
     font-size: 16px;
@@ -45,6 +56,7 @@
 }
 
 .city-icon {
+    margin-left: 10px;
     filter: brightness(0) invert(1);
 }
 

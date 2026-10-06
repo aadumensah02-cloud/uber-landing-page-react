@@ -1,0 +1,156 @@
+/* *,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+:root {
+    --page-padding: 24px;
+} */
+
+@media (max-width: 1032px) {
+    .hero-section-img,
+    #nav-links, 
+    .hero-img-text, 
+    .nav-side-links,
+    .eng-button {
+        display: none;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .mobile-button{
+        display: block;
+    }
+
+    header{
+        max-width: 100%  ;
+    }
+
+    .explore-section-content {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .log-in-section {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .city-section {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 20px;
+
+    }
+
+    .city-section img {
+        width: 100%;
+    }
+
+    .drive-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 40px;
+    }
+
+    .drive-section img {
+        width: 100%;
+    }
+
+    .drive-text {
+        padding: 0;
+    }
+
+    .business-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 40px;
+    }
+
+    .app-button {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .app-button button {
+        width: 100%;
+        text-align: left;
+    }
+
+    .uber-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .uber-buttons {
+        display: flex;
+    }
+
+
+
+
+
+
+}
+
+@media (max-width:600px) {
+    .explore-section-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .explore-card {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding: 16px;
+        min-height: auto;
+        aspect-ratio: 1 /1;
+        justify-content: center;
+    }
+
+    .explore-card span {
+        font-size: 16px;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+
+    .explore-card p, .explore-card button {
+        display: none;
+    }
+
+    .explore img {
+        position: static;
+        width: 60px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+}

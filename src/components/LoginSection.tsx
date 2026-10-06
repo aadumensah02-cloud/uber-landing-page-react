@@ -9,9 +9,9 @@ const [isLogInOpen, setIsLogInOpen] = useState(false);
 
     return (
        <div>
-            <div className="login-section">
+            <section className="login-section" aria-labelledby="login-section-title">
                 <div className="log-in-text">
-                <h2>Log in to see your account details</h2>
+                <h2 id="login-section-title">Log in to see your account details</h2>
                 <p>View past trips, tailored suggestions, support resources, and more.</p>
                 <div className="log-in-button">
                     <button  onClick={() => setIsLogInOpen(true)} >Log in to your account</button>
@@ -19,7 +19,7 @@ const [isLogInOpen, setIsLogInOpen] = useState(false);
                 </div>
                 </div>
                 <img src={loginImg} alt="" className="log-in-img"></img>
-            </div>
+            </section>
 
             <LogInModal isLogInOpen={isLogInOpen} onClose={() => setIsLogInOpen(false)} />
        </div>

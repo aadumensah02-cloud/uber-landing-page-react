@@ -14,9 +14,9 @@ const ReserveFeature: React.FC = () => {
 
     return (
         <div>
-            <div className="reserve-section">
-                <h2>Plan for later</h2>
-              <div className="reserve-content">
+            <section className="reserve-section" aria-labelledby="reserve-section-title">
+                <h2 id="reserve-section-title">Plan for later</h2>
+               <div className="reserve-content">
                     <div className="reserve-left">
                         <div className="reserve-text">
                           <h2>Get your ride right <br />with Uber Reserve</h2>
@@ -24,18 +24,18 @@ const ReserveFeature: React.FC = () => {
 
                            <div className="reserve-input">
                                 <div className="reserve-date">
-                                  <span>Date</span>
+                                  <label htmlFor="date">Date</label>
                                   <div className="field-box">
                                     <FontAwesomeIcon icon={faCalendarDays} className="field-icon" />
-                                    <input type="date" placeholder="Date" />
+                                    <input type="date" id="date" />
                                   </div>
                                   
                                </div>
                                <div className="reserve-time">
-                                  <span>Time</span>
+                                  <label htmlFor="time">Time</label>
                                   <div className="field-box">
                                     <FontAwesomeIcon icon={faClock} className="field-icon" />
-                                    <input type="time"/>
+                                    <input type="time" id="time"/>
                                   </div> 
                                </div> 
                            </div>
@@ -76,10 +76,9 @@ const ReserveFeature: React.FC = () => {
                         <a href="#">See terms</a>
                    </div>
               </div>
-            </div>
+            </section>
 
-              <PlanModal isPlanOpen={isPlanOpen} onClose={() => setIsPlanOpen(false)} />
-
+            <PlanModal isPlanOpen={isPlanOpen} onClose={() => setIsPlanOpen(false)} />
         </div>
     );
 };

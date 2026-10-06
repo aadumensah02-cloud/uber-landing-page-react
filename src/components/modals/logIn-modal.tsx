@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useId }from "react";
 import "../../styles/modal-styles/logIn-modal.css";
+// import "../../styles/modal-styles/globalmodal.css";
+import { useModalFocus } from "../../useModalFocus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faUser, faLock, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { createPortal } from "react-dom";
 
 interface logInModalProps {
     isLogInOpen: boolean;
@@ -11,20 +14,30 @@ interface logInModalProps {
 
 
 const LogInModal: React.FC<logInModalProps> = ({isLogInOpen, onClose}) => {
+    const titleId = useId();
+    const dialogRef = useModalFocus(isLogInOpen, onClose);
     // const [isOpen, setIsOpen] = useState(false);
 
     if (!isLogInOpen) return null;
 
-    return (
+    return createPortal (
         <div>
             <div className="overlay" onClick={onClose}>
-                <div className="modal" onClick={(e) => e.stopPropagation()}>
+                <div
+                    ref={dialogRef}
+                    className="login-modal"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby={titleId}
+                    tabIndex={-1}
+                    onClick={(e) => e.stopPropagation()}>
+
                     <button className="close-btn" onClick={onClose}>
                         &times;
                     </button>
 
-                    <h2>Sign In to your account</h2>
-                    <div>
+                    <h2 id={titleId}>Sign In to your account</h2>
+                    <div className="signin-input-modal">
                         <label htmlFor="email">Email:</label>
                         <div className="input-box">
                             <FontAwesomeIcon icon={faEnvelope} className="input-icon" />
@@ -58,15 +71,13 @@ const LogInModal: React.FC<logInModalProps> = ({isLogInOpen, onClose}) => {
                         <button className="google-button">Continue with Google <FontAwesomeIcon icon={faGoogle} /> </button>
                         <button className="google-button">Continue with SSH</button>
                     </div>
-
-                    
-                    
-
                 </div>
+               
 
             </div>
-        </div>
-    )
-}
+        </div>,
+        document.body
+    );
+};
 
 export default LogInModal;

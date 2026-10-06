@@ -13,9 +13,9 @@ const CitySection: React.FC = () => {
 
     return (
         <div>
-            <div className="city-section">
+            <section className="city-section" aria-labelledby="city-section-title">
                 <div className="city-text">
-                  <h2>Planning your next getaway?</h2>
+                  <h2 id="city-section-title">Planning your next getaway?</h2>
                   <p>From weekend road trip to international destination, we've got you covered. Explore transport options, points of interest, and more with our new City Hub</p>
                   <div className="city-button">
                       <img src={cityButton} alt="" className="city-icon"  style={{ width: 20, height: 20, flexShrink: 0 }} />
@@ -26,7 +26,7 @@ const CitySection: React.FC = () => {
                <div>
                  <img src={cityImg} alt=""/>
                </div>
-            </div>
+            </section>
 
 
             <CityModal isCityOpen={isCityOpen} onClose={() => setIsCityOpen(false)} />

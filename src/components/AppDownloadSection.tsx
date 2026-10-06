@@ -11,8 +11,8 @@ import '../styles/AppDownloadSection.css';
 const AppDownloadSection: React.FC = () => {
     return (
         <div>
-            <div className='app-section'>
-                <h2>It's easier in the apps</h2>
+            <section className='app-section' aria-labelledby="app-section-title">
+                <h2 id="app-section-title">It's easier in the apps</h2>
                 
                 <div className='qr-section'>
                     <QrCode
@@ -29,7 +29,7 @@ const AppDownloadSection: React.FC = () => {
                     arrow={arrowImg}
                     />
                 </div>
-            </div>
+            </section>
         </div>
 
     );
