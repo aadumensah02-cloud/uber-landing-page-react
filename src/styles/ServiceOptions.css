@@ -1,9 +1,7 @@
 .service-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
-    
-    
 }
 
 .service-options {
@@ -20,7 +18,7 @@ p {
 }
 
 .package-modal {
-    width:105%;
+    width: 105%;
     box-sizing: border-box;
     padding: 14px 18px;
     border: none;
@@ -34,4 +32,51 @@ p {
 
 .package-modal:focus {
     outline: 2px solid rgb(208, 205, 205);
+}
+
+
+
+@media (max-width: 768px) {
+    .service-options {
+        padding: 0;
+    }
+
+    .service-options h2 {
+        font-size: 1.66rem;
+        margin-top: 45px;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+        
+    }
+
+    .service-options p{
+        display: none;
+    }
+
+    .service-options button {
+        display: none;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 340px;        /* makes each card narrower */
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column-reverse;
+        align-items: center;
+        min-height: 0;          /* removes any fixed or minimum height */
+        height: auto;
+    }
+
+    .card-icon {
+        width: 50px;            /* smaller image, shorter card */
+        height: auto;
+    }
+
+    .card-title {
+        font-size: 13px;
+    }
 }

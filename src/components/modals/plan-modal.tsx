@@ -1,6 +1,5 @@
-import React, { useId} from "react";
+import React, { useId } from "react";
 import "../../styles/modal-styles/plan-modal.css";
-// import "../../styles/modal-styles/globalmodal.css";
 import { useModalFocus } from "../../useModalFocus";
 import { createPortal } from "react-dom";
 
@@ -9,17 +8,24 @@ interface PlanModelProps {
     onClose: () => void;
 }
 
-
-const PlanModal: React.FC<PlanModelProps> = ({isPlanOpen, onClose}) => {
+const PlanModal: React.FC<PlanModelProps> = ({ isPlanOpen, onClose }) => {
     const titleId = useId();
+    // Hooks must run before the early return below (Rules of Hooks)
     const dialogRef = useModalFocus(isPlanOpen, onClose);
-    // const [isOpen, setIsOpen] = useState(false);
 
+    // Render nothing while closed so the modal mounts fresh on each open
     if (!isPlanOpen) return null;
 
-    return createPortal (
+    // Portal to document.body so the overlay isn't clipped by parent styles
+    return createPortal(
         <div>
-            <div className="overlay" onClick={onClose}>
+            {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions -- Esc is handled in useModalFocus */}
+            <div
+                className="overlay"
+                onClick={(e) => {
+                    if (e.target === e.currentTarget) onClose();
+                }}
+            >
                 <div
                     ref={dialogRef}
                     className="plan-modal"
@@ -27,7 +33,7 @@ const PlanModal: React.FC<PlanModelProps> = ({isPlanOpen, onClose}) => {
                     aria-modal="true"
                     aria-labelledby={titleId}
                     tabIndex={-1}
-                    onClick={(e) => e.stopPropagation()}>
+                >
                     <button className="plan-close-btn" onClick={onClose}>
                         &times;
                     </button>

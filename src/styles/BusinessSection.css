@@ -2,4 +2,8 @@
     margin-top: 140px;
     align-self: center;
 }
-
+@media (max-width: 768px) {
+.business-section .section-link {
+    font-size: 14px;
+}
+}

@@ -22,8 +22,8 @@ img {
 
 @media (max-width: 1032px) {
     .hero-section-img,
-    #nav-links, 
-    .hero-img-text, 
+    #nav-links,
+    .hero-img-text,
     .nav-side-links,
     .eng-button {
         display: none;
@@ -33,17 +33,16 @@ img {
         padding: 20px;
     }
 
-    .mobile-button{
+    .mobile-button {
         display: block;
     }
 
-    header{
-        max-width: 100%  ;
+    header {
+        max-width: 100%;
     }
 
     .explore-section-content {
         grid-template-columns: repeat(2, 1fr);
-
     }
 
     .log-in-section {
@@ -57,7 +56,6 @@ img {
         flex-direction: column;
         gap: 40px;
         margin-top: 20px;
-
     }
 
     .city-section img {
@@ -103,15 +101,9 @@ img {
     .uber-buttons {
         display: flex;
     }
-
-
-
-
-
-
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
     .explore-section-content {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
@@ -142,7 +134,8 @@ img {
         margin-bottom: 0;
     }
 
-    .explore-card p, .explore-card button {
+    .explore-card p,
+    .explore-card button {
         display: none;
     }
 
@@ -152,5 +145,4 @@ img {
         height: auto;
         margin: 0 auto;
     }
-
 }

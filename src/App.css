@@ -1,19 +1,68 @@
 .App {
-  font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
 
 .text-section {
-  padding: 130px 30px;
+    padding: 130px 30px;
 }
 
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 2px solid #276ef1; 
-  outline-offset: 2px;
-  border-radius: 10px;
+    outline: 2px solid #276ef1;
+    outline-offset: 2px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;                 /* removes the default 8px white strip */
+    }
+
+    .App {
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 97px;
+        margin: 0;
+    }
+
+    .text-section {
+        padding: 24px 16px;        /* the single 16px gutter for the whole hero */
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .header-section {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    html {
+        scroll-padding-top: 97px;   /* keeps focused items out from under the bar */
+    }
 }
 
 
 
+@media (max-width: 768px) {
+    .App main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .App main .text-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

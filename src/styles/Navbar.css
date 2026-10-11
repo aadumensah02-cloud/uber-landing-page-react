@@ -1,4 +1,3 @@
-
 header h1 {
     font-size: 22px;
     font-weight: 100;
@@ -27,18 +26,22 @@ ul {
 
 .nav-links {
     align-self: center;
-    font-size: 14px;    
+    font-size: 14px;
     text-decoration: none;
     margin-right: 20px;
     color: white;
     padding: 10px 10px;
     border-radius: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
 }
 
 .navbar-section {
     display: flex;
-    justify-content: space-between ;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 nav ul li {
@@ -48,25 +51,26 @@ nav ul li {
 }
 
 #nav-links.mobile-open li.accordion-item {
-  display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 nav ul li select {
     border: none;
 }
 
-.nav-right-side-section {
-    /* margin-left: auto; */
+.nav-actions {
     display: flex;
     align-items: center;
-    padding-left: 350px;
-
+    margin-left: auto;        /* pushes the whole group to the right edge of the header */
 }
 
-.nav-right-side-section button {
-    /* margin-right: 20px; */
+.nav-right-side-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* padding-left: 350px; */
 }
 
 .nav-right-side-section a {
@@ -92,7 +96,9 @@ nav ul li select {
     padding: 10px 12px;
     border-radius: 20px;
     background-color: white;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
 }
 
 .signup-button:hover {
@@ -106,7 +112,9 @@ nav ul li select {
     font-size: 16px;
     padding: 7px 15px;
     border-radius: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
 }
 
 #about-nav:hover {
@@ -127,22 +135,29 @@ select option {
 }
 
 .nav-links:hover {
-   background-color: rgb(47, 45, 45);
+    background-color: rgb(47, 45, 45);
 }
 
 .nav-help-button {
     font-size: 13px;
     padding: 10px 15px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
     border-radius: 20px;
     flex: 1;
     border: none;
 }
 
 .nav-log-button {
+    background-color: black;
+    color: white;
+    border: none;
     padding: 10px 15px;
     font-size: 13px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
     border-radius: 20px;
 }
 
@@ -159,20 +174,19 @@ select option {
     background-color: black;
     color: white;
     border: none;
-
 }
 
 .close-button {
-  display:none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: white;
-
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
 }
 
 .nav-left-side-section {
+    flex: 0 0 auto;
     display: flex;
     text-align: center;
 }
@@ -189,8 +203,9 @@ select option {
     padding: 10px 10px;
     border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
 }
 
 .accordion-toggle:hover {
@@ -220,11 +235,11 @@ nav ul li,
 }
 
 .accordion-item {
-    position: relative;          /* the dropdown anchors to this */
+    position: relative; /* the dropdown anchors to this */
 }
 
 .accordion-panel {
-    display: none;               /* hidden until open */
+    display: none; /* hidden until open */
     position: absolute;
     top: 100%;
     left: 0;
@@ -239,7 +254,7 @@ nav ul li,
 }
 
 .accordion-panel.open {
-    display: block;              /* shown when state is "about" */
+    display: block; /* shown when state is "about" */
 }
 
 .accordion-panel li a {
@@ -254,5 +269,124 @@ nav ul li,
     width: 100%;
 }
 
+.mobile-button,
+.close-button {
+    display: none;
+}
 
+#nav-links {
+    display: none;
+}
 
+@media (max-width: 768px) {
+    header {
+        padding: 0;
+    }
+
+    .navbar-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #uber-id {
+        margin: 0;
+    }
+
+    .nav-left-side-section {
+        position: relative;
+        flex: 0 0 auto;
+        width: 0;
+        min-width: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-right-side-section {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .eng-button,
+    .nav-help-button {
+        display: none;
+    }
+
+    .mobile-button,
+    .close-button {
+        display: block;
+        flex: 0 0 auto;
+        margin-left: 0;
+        padding: 4px 8px;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+    }
+
+    #nav-links {
+        display: none;
+    }
+
+    #nav-links.mobile-open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 68px; /* match your navbar height */
+        left: 0;
+        width: 100%;
+        height: calc(104vh - 70px);
+        background: white;
+        color: black; /* or white, to match your theme */
+        padding: 24px;
+        gap: 20px;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+    #nav-links.mobile-open a {
+        color: black;
+        font-size: 1.3rem;
+    }
+
+    #nav-links.mobile-open .accordion-toggle {
+        background-color: white;
+        color: black;
+        font-size: 1.3rem;
+    }
+
+    #nav-links.mobile-open .chevron {
+        filter: invert(1) brightness(0);
+        width: 30px;
+        height: auto;
+    }
+
+    #nav-links.mobile-open .accordion-panel {
+        width: 100%;
+    }
+
+    html.menu-open,
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        justify-content: flex-end;
+    }
+
+    .nav-log-button,
+    .signup-button {
+        padding: 8px 12px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}

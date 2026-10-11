@@ -11,5 +11,26 @@
 
 .app-section h2 {
     font-size: 30 px;
-} 
+}
 
+@media (max-width: 768px) {
+    .app-section {
+        padding: 20px 20px;
+    }
+
+    .app-section h2 {
+        font-size: 1.66rem;
+    }
+
+    .qr-section {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .qr-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+}

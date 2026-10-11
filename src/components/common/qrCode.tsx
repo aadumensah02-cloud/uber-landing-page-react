@@ -1,21 +1,21 @@
 import React from "react";
-import '../../styles/qrCode.css';
-
+import "../../styles/qrCode.css";
 
 interface qrCodeprops {
     icon?: string;
     title: string;
     description: string;
+    linkHref: string;
     arrow: string;
 }
 
-const QrCode: React.FC<qrCodeprops> = ({icon, title, description, arrow}) => {
+const QrCode: React.FC<qrCodeprops> = ({ icon, title, description, linkHref, arrow }) => {
     return (
-       <div> 
-            <a href="#" className="qrCode">
+        <div>
+            <a href={linkHref} className="qrCode">
                 <div className="qr-content">
                     <div className="qr-scan">
-                        <img src={icon} alt="" className="qr-img"/>
+                        <img src={icon} alt="" className="qr-img" />
                     </div>
 
                     <div className="qr-text">
@@ -23,13 +23,13 @@ const QrCode: React.FC<qrCodeprops> = ({icon, title, description, arrow}) => {
                             <h2 className="qr-title">{title}</h2>
                             <span className="qr-description">{description}</span>
                         </div>
-    
-                        <img src={arrow} alt="" className="qr-arrow" /> 
+
+                        <img src={arrow} alt="" className="qr-arrow" />
                     </div>
                 </div>
-            </a> 
-       </div> 
-    )
-}
+            </a>
+        </div>
+    );
+};
 
 export default QrCode;

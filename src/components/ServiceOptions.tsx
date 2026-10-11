@@ -1,10 +1,10 @@
-import React, {useState}from "react";
+import React, { useState } from "react";
 import Card from "./common/Card";
-import '../styles/ServiceOptions.css'
-import rideIcon from '../img/uber-img2.png';
-import reserveIcon from '../img/uber-img3.png'
-import courierIcon from '../img/uber-img4.png'
-import motorIcon from '../img/uber-img5.png'
+import "../styles/ServiceOptions.css";
+import rideIcon from "../img/uber-img2.png";
+import reserveIcon from "../img/uber-img3.png";
+import courierIcon from "../img/uber-img4.png";
+import motorIcon from "../img/uber-img5.png";
 import ServiceModal from "./modals/service-modal";
 
 export interface Service {
@@ -28,7 +28,7 @@ const services: Service[] = [
                 <li>Track your driver in real time</li>
             </ul>
         ),
-        buttonText:('Order a ride'),
+        buttonText: "Order a ride",
     },
     {
         id: "reserve",
@@ -36,7 +36,7 @@ const services: Service[] = [
         title: "Reserve",
         description: "Reserve a ride in advance so you can relax on the day of your trip",
         details: <p>Book up to 90 days ahead and cancel free up to 60 minutes.</p>,
-        buttonText:('Order a ride'),
+        buttonText: "Order a ride",
     },
     {
         id: "courier",
@@ -49,7 +49,7 @@ const services: Service[] = [
                 <input type="text" placeholder="Package description" className="package-modal" />
             </>
         ),
-        buttonText:('Order a courier'),
+        buttonText: "Order a courier",
     },
     {
         id: "motor",
@@ -57,7 +57,7 @@ const services: Service[] = [
         title: "Motor (Okada)",
         description: "Get affordable motorbike rides in minutes at your doorstep",
         details: <p>Helmets are provided on every trip.</p>,
-        buttonText:('Order a ride'),
+        buttonText: "Order a ride",
     },
 ];
 

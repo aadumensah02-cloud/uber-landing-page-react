@@ -1,75 +1,124 @@
-# React + TypeScript + Vite
+# Uber Landing Page (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive Uber-style landing page built with React, TypeScript and Vite. It includes a hero section with a sticky "See prices" call to action, service cards, and a set of accessible modal dialogs (log in, sign up, car rental, city selection, and more).
 
-Currently, two official plugins are available:
+> Replace the bracketed placeholders below (`[...]`) with your own details.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Table of contents
 
-## React Compiler
+- [Features](#features)
+- [Tech stack](#tech-stack)
+- [Getting started](#getting-started)
+- [Available scripts](#available-scripts)
+- [Project structure](#project-structure)
+- [Accessibility](#accessibility)
+- [Code quality](#code-quality)
+- [Contributing](#contributing)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Hero section with ride search fields and a sticky "See prices" button
+- Service cards (Ride, Motor, Drive and others) that open detail modals
+- Modals for log in, sign up, city selection, car rental, plans and prices
+- Navbar, footer with link columns and social icons, app download and business sections
+- Keyboard-friendly modals: focus moves in on open, Tab stays inside, Esc closes, focus returns to the trigger
+- Responsive layout with a mobile menu
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Area       | Tools                                                                |
+| ---------- | -------------------------------------------------------------------- |
+| Framework  | React, TypeScript                                                    |
+| Build tool | Vite                                                                 |
+| Styling    | Plain CSS (one stylesheet per component or modal)                    |
+| Icons      | Font Awesome (`@fortawesome/react-fontawesome`)                      |
+| Linting    | ESLint with `eslint-plugin-jsx-a11y` and `eslint-plugin-react-hooks` |
+| Formatting | Prettier                                                             |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
 
+- Node.js [version, e.g. 20 or later]
+- npm (comes with Node.js)
+
+### Installation
+
+```bash
+git clone [your-repository-url]
+cd uber-landing-page-react
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+If `npm install` reports a peer dependency conflict for `eslint-plugin-jsx-a11y` (it does not yet declare support for ESLint 10), use:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm install --legacy-peer-deps
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Run locally
+
+```bash
+npm run dev
+```
+
+Open the address shown in the terminal (usually `http://localhost:5173`).
+
+## Available scripts
+
+| Command            | What it does                                          |
+| ------------------ | ----------------------------------------------------- |
+| `npm run dev`      | Starts the development server with hot reload         |
+| `npm run build`    | Type-checks and creates a production build in `dist/` |
+| `npm run preview`  | Serves the production build locally                   |
+| `npm run lint`     | Runs ESLint, including accessibility rules            |
+| `npm run lint:fix` | Runs ESLint and fixes what it can automatically       |
+| `npm run format`   | Formats everything in `src/` with Prettier            |
+
+## Project structure
 
 ```
+src/
+  assets/            Images and icons
+  components/
+    common/          Reusable pieces (Card, Section, Button, QR code)
+    modals/          Modal dialogs (login, signup, city, drive, plan, ...)
+    Navbar.tsx
+    HeroSection.tsx
+    Footer.tsx
+    ...              Other page sections
+  styles/
+    modal-styles/    One stylesheet per modal, plus shared globalmodal.css
+  useModalFocus.ts   Shared hook for modal focus handling
+  App.tsx
+  main.tsx
+```
+
+## Accessibility
+
+Accessibility was checked with Lighthouse and manual keyboard testing.
+
+- **Modals:** `role="dialog"`, `aria-modal`, and a labelled title. The `useModalFocus` hook moves focus into the dialog, traps Tab, closes on Esc, and restores focus to the button that opened it.
+- **Controls:** actions use `<button>`, navigation uses `<a href>`. Icon-only controls have an `aria-label`.
+- **Forms:** every input has a label connected through `htmlFor` and `id`.
+- **Linting:** `eslint-plugin-jsx-a11y` flags common mistakes while you code.
+
+When adding a new modal, call `useModalFocus(isOpen, onClose)` and attach the returned ref to the dialog element.
+
+## Code quality
+
+- Run `npm run format` and `npm run lint` before committing.
+- Avoid `console.log` in committed code.
+- Prefer real `<button>` and `<a href>` elements over clickable `<div>`s.
+- Keep DOM order the same as visual order so keyboard navigation makes sense.
+
+## Contributing
+
+1. Create a branch: `git checkout -b feature/your-change`
+2. Make your changes and run `npm run lint` and `npm run build`
+3. Commit with a clear message, for example `feat: add plan modal`
+4. Open a pull request
+
+## License
+
+All rights reserved

@@ -1,6 +1,6 @@
 .reserve-section {
     margin-top: 90px;
-    padding-left: 30px; 
+    padding-left: 30px;
 }
 
 .reserve-content {
@@ -17,7 +17,6 @@
 .reserve-section h2 {
     margin-bottom: 30px;
     font-size: 37px;
-
 }
 
 .reserve-left p {
@@ -36,27 +35,25 @@
     padding-top: 80px;
     padding-bottom: 30px;
     padding-right: 400px;
-    padding-left: 40px; 
+    padding-left: 40px;
     border-radius: 20px;
     flex: 1;
     min-width: 300px;
-    height: 410px;
+    height: 413px;
 }
 
 .reserve-right {
     border: 1px solid #f6f6f6;
     border-radius: 20px;
     padding: 15px 20px;
-    padding-left:30px;
+    padding-left: 30px;
     flex: 1;
     min-width: 280px;
-
 }
 
 .reserve-right-text {
     margin-left: 40px;
     color: rgb(52, 46, 46);
-
 }
 
 .reserve-right a {
@@ -64,7 +61,7 @@
     color: #696969;
     text-underline-offset: 8px;
     text-decoration-color: black;
-    text-decoration-style: dashed ;
+    text-decoration-style: dashed;
 }
 
 hr {
@@ -75,7 +72,7 @@ hr {
     margin-top: 0;
     font-size: 21px;
     margin-left: 2px;
-} 
+}
 
 .reserve-right p {
     font-size: 17px;
@@ -121,23 +118,23 @@ hr {
 }
 
 .reserve-img {
-  width: 290px;
-  height: 400px;
-  display: block;
-  margin: 0;       
-  padding: 0;
+    width: 290px;
+    height: auto;
+    /* height: 400px; */
+    display: block;
+    margin: 0;
+    padding: 0;
     /* width: 280px; */
     /* height: 300px; */
     /* transform: translateX(10px); */
-
 }
 
 .reserve-image {
-  position: absolute;
-  margin: 0; 
-  top: 10px;   
-  right: 0.3px;      
-  z-index: 1;
+    position: absolute;
+    margin: 0;
+    top: 0px;
+    right: 0.3px;
+    z-index: 1;
 }
 
 .reserve-input {
@@ -162,14 +159,14 @@ hr {
     background: #f6f6f6;
     font-size: 18px;
     padding: 0 44px 0 52px;
-    color: #444040;   
+    color: #444040;
 }
 
 .field-icon {
     position: absolute;
     left: 18px;
     font-size: 18px;
-    pointer-events: none;     /* clicks reach the field underneath */
+    pointer-events: none; /* clicks reach the field underneath */
 }
 
 .field-caret {
@@ -200,7 +197,6 @@ hr {
     display: flex;
     align-items: center;
     gap: 20px;
-    
 }
 
 .benefit-icon {
@@ -208,4 +204,86 @@ hr {
     width: 24px;
     font-size: 24px;
 }
+
+
+@media (max-width: 768px) {
+   .reserve-section {
+        padding: 0;
+    }
+
+    .reserve-text {
+        width: 100%;
+    }
+
+    .reserve-left {
+        padding: 35px 37px;
+    }
+
+    #reserve-section-title {
+        font-size: 1.66rem;
+    }
+
+    .reserve-img {
+        display: none;
+    }
+
+    .reserve-text h2 {
+        font-size: 1.66rem;
+        margin-bottom: 13px;
+    }
+
+    .reserve-text p{
+        font-size: 1.0rem;
+        padding: 0;
+    }
+
+    .reserve-input {
+        flex-direction: column;
+
+    }
+
+    .field-box input {
+        flex: 1;                    /* takes the space left after the icon */
+        width: 100%;
+        min-width: 0;               /* lets the input shrink below its default size */
+        max-width: 100%;
+    }
+
+    .reserve-button {
+        width: 100%;
+        padding: 15px 0px;
+        
+    }
+
+    .reserve-right-text {
+        margin: 0;
+    }
+
+    .reserve-section h2 {
+        margin-bottom: 15px;
+    }
+
+    .reserve-input,
+    .reserve-date,
+    .reserve-time {
+        width: 100%;
+    }
+
+    .field-box {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .field-box input {
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .reserve-input button {      /* use your Next button's real class */
+        width: 100%;
+    }
+}
+
 

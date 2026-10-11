@@ -1,7 +1,8 @@
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
-
 
 .overlay {
     position: fixed;
@@ -14,11 +15,10 @@
     justify-content: center;
     align-items: center;
     z-index: 2000;
-    
 }
 
 .price-modal {
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     background: #fff;
     padding: 45px 20px;
     border-radius: 8px;
@@ -26,10 +26,10 @@
     height: 65vh;
     max-height: 100vh;
     overflow-y: hidden;
-    width:460px;
-
+    width: 460px;
 }
 
+/* Transparent button behind the dialog: click-to-close with no div click handler */
 .price-close-btn {
     position: absolute;
     top: 10px;
@@ -49,9 +49,8 @@
     margin-left: 0;
 }
 
-
 .price-modal h2 {
-    margin: 12px 0 4px;    
+    margin: 12px 0 4px;
 }
 
 .price-modal p {
@@ -77,11 +76,9 @@
     line-height: 1.4;
 }
 
-
 .order-input {
     display: flex;
     flex-direction: column;
-    
 }
 
 .order-input input {
@@ -92,12 +89,11 @@
 }
 
 .order-button {
-    /* padding: 10px 100px; */
+    padding: 10px 0px;
     width: 100%;
     border-radius: 30px;
     background-color: black;
     color: white;
-    
 }
 
 .input-modal {
@@ -105,6 +101,38 @@
     font-weight: bold;
 }
 
-.order-button {
-    padding: 10px 172px;
+@media (max-width: 768px) {
+    .price-modal {
+        width: calc(100% - 32px);
+        max-width: 360px;
+        height: auto;
+        max-height: 90vh;
+        margin: 0 auto;
+        padding: 16px;
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+
+    .price-close-btn {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        margin-left: 0;
+    }
+
+    .order-button {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        margin: 0;
+        padding: 12px 0;
+    }
+
+    .order-input input {
+        box-sizing: border-box; /* input has width: 100% + padding: 10px, so this stops it overflowing too */
+    }
 }

@@ -2,7 +2,6 @@
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
-    
 }
 
 .hero-section-left {
@@ -19,9 +18,9 @@
     gap: 62px;
     max-width: 1200px;
     margin: 0 auto;
-    /* flex-wrap: wrap; */
-
 }
+
+/* Placeholder row height; must match the fixed button's height in HeroSection */
 
 .header-button.fixed {
     position: fixed;
@@ -30,17 +29,16 @@
     width: 100%;
     padding: 10px 20px;
     background: white;
-    z-index: 900;             
+    z-index: 900;
 }
 
 .header-button.fixed .prices-button {
-    width: 97%;          
+    width: 97%;
 }
 
 .header-button.fixed .prices-link {
     display: none;
 }
-
 
 .logo1 {
     padding-right: 70px;
@@ -55,13 +53,15 @@
     flex-direction: column;
 }
 
-#pickup-location, #dropoff-location {
+#pickup-location,
+#dropoff-location {
     border-radius: 12px;
     border: none;
     background-color: #f6f6f6;
 }
 
-#pickup-location::placeholder, #dropoff-location::placeholder {
+#pickup-location::placeholder,
+#dropoff-location::placeholder {
     font-size: 17px;
     color: rgb(95, 95, 96);
 }
@@ -69,14 +69,14 @@
 #pickup:hover {
     background-color: #eae9e9;
 }
- 
+
 .hero-header {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.hero-header p{
+.hero-header p {
     font-weight: 550;
 }
 
@@ -84,11 +84,10 @@
     color: black;
     text-decoration: underline;
 }
- 
+
 .hero-section-left h1 {
     font-size: 51px;
     margin-top: 0;
-
 }
 
 #pickup {
@@ -135,12 +134,22 @@
 }
 
 .prices-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
     text-decoration: underline;
     text-underline-offset: 8px;
     margin-left: 20px;
     color: black;
     text-decoration-color: #f6f6f6;
     transition: text-decoration-color 0.5s ease;
+}
+
+.link-short {
+    display: none;
 }
 
 .prices-link:hover {
@@ -160,7 +169,6 @@
     left: 0;
     right: 0;
     align-items: center;
-  
 }
 
 .hero-img-text button {
@@ -179,9 +187,9 @@
 }
 
 .hero-img {
-  width: 530px;
-  max-width: 530px;
-  position: relative;
+    width: 530px;
+    max-width: 530px;
+    position: relative;
 }
 
 .select-wrapper {
@@ -207,7 +215,7 @@
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    pointer-events: none;   
+    pointer-events: none;
 }
 
 .hero-select {
@@ -220,13 +228,12 @@
     margin-bottom: 16px;
 }
 
-
 .hero-select::before {
     content: "";
     position: absolute;
-    left: 35px;          
-    top: 28px;           
-    height: 64px;      
+    left: 35px;
+    top: 28px;
+    height: 64px;
     width: 2px;
     background: black;
     z-index: 1;
@@ -251,13 +258,12 @@
     border-radius: 8px;
     background-color: #f6f6f6;
     font-size: 18px;
-    padding: 0 0px 0 64px;  
+    padding: 0 0px 0 64px;
 }
 
 .location-input input:focus {
     outline: 2px solid black;
 }
-
 
 .location-dot {
     position: absolute;
@@ -268,10 +274,9 @@
     border-radius: 50%;
     background: black;
     border: 5px solid black;
-    box-shadow: inset 0 0 0 3px white; 
+    box-shadow: inset 0 0 0 3px white;
     z-index: 2;
 }
-
 
 .location-square {
     position: absolute;
@@ -280,7 +285,9 @@
     height: 18px;
     box-sizing: border-box;
     background: black;
-    box-shadow: inset 0 0 0 5px black, inset 0 0 0 7px white;
+    box-shadow:
+        inset 0 0 0 5px black,
+        inset 0 0 0 7px white;
     z-index: 2;
 }
 
@@ -296,7 +303,6 @@
     opacity: 0;
 }
 
-/* older Safari */
 .location-input input::-webkit-list-button {
     display: none !important;
 }
@@ -305,13 +311,149 @@
     width: 20%;
 }
 
+@media (max-width: 768px) {
+    .header-button.fixed {
+        display: none !important;
+    }
 
+    .hero-section {
+        padding: 0;
+        margin: 0;
+    }
 
+    .hero-section-content {
+        flex-direction: column;
+        gap: 24px;
+        padding: 0;
+    }
 
+    .hero-section-left,
+    .hero-section-right {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0 7px; /* equal gutters on both sides */
+    }
 
+    #hero-title {
+        font-size: 2.25rem;
+        line-height: 1.15;
+    }
 
+    /* Inputs: fill the row, text fits, icons stay inside */
+    .hero-select,
+    .location-input {
+        width: 100%;
+    }
 
+    .location-input input {
+        width: 100%;
+        padding-left: 52px; /* room for the dot / square */
+        padding-right: 40px; /* room for the arrow */
+        font-size: 16px; /* stops iPhone zoom-on-focus */
+        text-overflow: ellipsis;
+    }
 
- 
- 
- 
+    .location-dot,
+    .location-square {
+        left: 20px;
+    }
+
+    /* Buttons: stack, but only while NOT in fixed-bar mode */
+    .header-button:not(.fixed) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 12px;
+    }
+
+    .link-full {
+        display: none;
+    }
+
+    .header-button:not(.fixed) .prices-button {
+        flex-shrink: 0; /* the button keeps its size */
+        margin-top: 0; /* removes the desktop 20px top margin */
+    }
+
+    .header-button:not(.fixed) .prices-link {
+        display: inline;
+        flex: 1; /* the link takes the remaining width */
+        min-width: 0; /* lets the text wrap instead of overflowing */
+        margin-top: 0; /* removes the margin-top: 15px from the earlier rule */
+        text-align: left;
+        font-size: 15px;
+        margin-left: 5px;
+    }
+
+    .link-short {
+        display: inline;
+    }
+
+    .prices-link {
+        justify-content: flex-start;
+        text-align: left;
+        padding: 0;
+    }
+
+    /* Image and its "Ready to travel?" bar */
+    .hero-img {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .logo1 {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-img-text {
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .hero-img-text button {
+        flex-shrink: 0;
+        min-height: 44px;
+        white-space: nowrap;
+    }
+
+    .location-arrow {
+        right: 20px;
+    }
+
+    .prices-link {
+        font-size: 14px;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .hero-header {
+        margin-top: 70px;
+    }
+
+    .select-wrapper {
+        display: none;
+    }
+
+    .hero-section-right {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-button.fixed {
+        position: static;
+    }
+}

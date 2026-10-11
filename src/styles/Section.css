@@ -12,9 +12,8 @@
 }
 
 .section-reverse {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
-
 
 .section-title {
     font-size: 35px;
@@ -28,16 +27,14 @@
 }
 
 .section-reverse .section-text {
-  padding-right: 20px;
-  padding-left: 220px;
-  padding-left: 150px;
+    padding-right: 20px;
+    padding-left: 220px;
+    padding-left: 150px;
 }
-
 
 .section-icon {
     width: 560px;
 }
-
 
 .section-description {
     font-size: 17px;
@@ -57,15 +54,13 @@
 }
 
 .section-button:hover {
-  background-color: rgb(47, 45, 45);
+    background-color: rgb(47, 45, 45);
 }
 
 .section-link {
     text-decoration: underline;
-    margin-left: 20px;
     color: black;
     text-underline-offset: 8px;
-    margin-left: 20px;
     color: black;
     text-decoration-color: #e6e6e6;
     transition: text-decoration-color 0.5s ease;
@@ -77,4 +72,61 @@
 
 .section-lower {
     display: flex;
+}
+
+.Section-lower {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .section-icon {
+        display: none;
+    }
+
+    .section-text {
+        padding: 0;
+    }
+
+    .section-reverse .section-text {
+        padding: 0;
+    }
+
+    .section-title {
+        font-size: 1.66rem;
+    }
+
+    .section-description {
+        font-size: 1.0rem;
+        padding: 0;
+    }
+
+    .section {
+        margin-top: 20px;
+
+    }
+
+    .section-link {
+        font-size: 13.3px;
+    }
+
+    .Section-lower.actions-column {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .Section-lower.actions-column .section-button {
+        width: 200px;   /* or 60% / auto; remove if you want it as wide as its text */
+    }
+}
+
+@media (max-width: 360px) {
+    .section-link {
+        margin: 0;
+        margin-left: 6px;
+    }
 }

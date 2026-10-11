@@ -1,7 +1,8 @@
- *, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
-
 
 .overlay {
     position: fixed;
@@ -14,22 +15,21 @@
     justify-content: center;
     align-items: center;
     z-index: 2000;
-    
 }
 
 .drive-modal {
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     background: #fff;
     padding: 17px 35px;
     border-radius: 8px;
     position: relative;
     height: 65vh;
-    max-height: 100vh;
-    overflow-y: hidden;
-    width: 500px
+    max-height: 100vh;     /* Scroll inside the modal instead of cutting off the Complete button */
+    overflow-y: hidden;     /* Scroll inside the modal instead of cutting off the Complete button */
+    width: 500px;
+}
 
-} 
-
+/* Transparent button behind the dialog: click-to-close with no div click handler */
 .drive-close-btn {
     position: absolute;
     top: 10px;
@@ -42,7 +42,7 @@
 }
 
 .drive-modal h2 {
-    margin: 12px 0 20px;    
+    margin: 12px 0 20px;
 }
 
 .drive-modal p {
@@ -51,14 +51,12 @@
     padding-right: 20px;
 }
 
-.drive-top-modal, .drive-middle-modal,.drive-bottom-modal   {
+.drive-top-modal,
+.drive-middle-modal,
+.drive-bottom-modal {
     display: flex;
     flex-direction: row;
     gap: 20px;
- 
-}
-.number-modal select {
-    /* width: 100%; */
 }
 
 .drive-modal-content label {
@@ -69,7 +67,6 @@
     padding: 7px;
     margin-bottom: 20px;
     width: 204px;
-    
 }
 
 .drive-modal-content select {
@@ -83,5 +80,53 @@
     margin-top: 10px;
     color: white;
     background-color: black;
-    border-radius: 10px
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .drive-top-modal > *,
+    .drive-middle-modal > *,
+    .drive-bottom-modal > * {
+        min-width: 0;
+    }
+
+    .drive-modal {
+        width: calc(100% - 32px);
+        max-width: 360px;
+        height: auto;
+        max-height: 90vh;
+        margin: 0 auto;
+        padding: 16px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .drive-close-btn {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        margin-left: 0;
+    }
+
+    .drive-modal-content input,
+    .drive-modal-content select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .drive-top-modal,
+    .drive-middle-modal,
+    .drive-bottom-modal {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .drive-modal-button {
+        width: 100%;
+        padding: 12px 0;
+        box-sizing: border-box;
+    }
 }

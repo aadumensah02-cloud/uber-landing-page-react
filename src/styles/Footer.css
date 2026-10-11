@@ -3,7 +3,7 @@
     padding: 100px 100px;
 }
 
-.uber-content { 
+.uber-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -28,7 +28,6 @@
 .footer-section a {
     text-decoration: none;
     color: white;
-    
 }
 
 .uber-section {
@@ -71,7 +70,7 @@
     margin-bottom: 70px;
 }
 
-.uber-buttons button{
+.uber-buttons button {
     padding: 8px 20px;
     border-radius: 10px;
     border: none;
@@ -89,7 +88,7 @@
     /* font-size: 12px; */
     color: #e6dede;
     min-height: 24px;
-    min-width: 24px
+    min-width: 24px;
 }
 
 .uber-terms a {
@@ -113,11 +112,11 @@
 
 .footer-social a {
     color: white;
-    display: block; 
+    display: block;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 32px;               /* at least 24px for the touch target audit */
+    width: 32px; /* at least 24px for the touch target audit */
     height: 32px;
 }
 
@@ -142,4 +141,72 @@
     display: flex;
     justify-content: space-between;
     margin-top: 56px;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+       padding: 0;
+       padding: 20px;
+       /* padding-bottom: 60px; */
+    }
+
+    .uber-content {
+        grid-template-columns: 1fr;
+    }
+
+    .uber-link {
+        font-size: 1.0rem;
+    }
+
+    .uber-section a {
+        font-size: 0.85rem;
+    }
+
+    .footer-section span {
+        margin-top: 40px;
+        font-size: 1.1rem;
+    }
+
+    .footer-info {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .uber-buttons {
+        flex-direction: column;
+        padding: 0;
+        margin: 60px 0;
+        margin-right: 260px;
+        gap: 20px;
+    }
+
+    .uber-buttons button {
+        padding: 0;
+        margin: 0;
+    }
+
+    .uber-terms {
+        /* padding-bottom: 64px; */
+        flex-direction: column;
+    }
+
+    .uber-terms-link {
+        margin-top: 44px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+  .footer-section .uber-terms span {
+    font-size: 0.7rem;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 360px) {
+    .uber-buttons button {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
 }

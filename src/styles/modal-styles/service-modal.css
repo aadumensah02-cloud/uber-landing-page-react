@@ -1,7 +1,8 @@
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
-
 
 .overlay {
     position: fixed;
@@ -14,20 +15,19 @@
     justify-content: center;
     align-items: center;
     z-index: 2000;
-    
 }
 
 .service-modal {
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     background: #fff;
     padding: 45px 20px;
     border-radius: 8px;
     position: relative;
     max-height: 100vh;
     overflow-y: hidden;
-
 }
 
+/* Transparent button behind the dialog: click-to-close with no div click handler */
 .service-close-btn {
     position: absolute;
     top: 10px;
@@ -47,9 +47,8 @@
     margin-left: 0;
 }
 
-
 .service-modal h2 {
-    margin: 12px 0 4px;    
+    margin: 12px 0 4px;
 }
 
 .service-modal p {
@@ -80,7 +79,7 @@
     border-radius: 7px;
     background-color: black;
     color: white;
-    margin-top:15px;
+    margin-top: 15px;
 }
 
 .service-modal-input {
@@ -106,3 +105,27 @@
     margin-top: 8px;
 }
 
+@media (max-width: 768px) {
+    .service-modal {
+        width: calc(100% - 32px);
+        max-width: 360px;
+        height: auto;
+        max-height: 90vh;
+        margin: 0 auto;
+        padding: 16px;
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+
+    .service-close-btn {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        margin-left: 0;
+    }
+
+    .service-modal-button {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
