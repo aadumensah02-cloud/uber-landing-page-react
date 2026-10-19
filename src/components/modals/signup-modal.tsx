@@ -89,18 +89,18 @@ const SignupModal: React.FC<SignupModelProps> = ({ isSignupOpen, onClose }) => {
                             </div>
                         </div>
 
-                        <button className="signup-modal-button">Create Account</button>
+                        <button className="signup-modal-button" onClick={onClose}>Create Account</button>
 
                         <div className="signup-modal-span">
                             <span>or</span>
                         </div>
 
                         <div className="signup-button-modal">
-                            <button className="signup-google-button">
+                            <button className="signup-google-button" onClick={onClose}>
                                 Continue with Google{" "}
                                 <FontAwesomeIcon icon={faGoogle} aria-hidden="true" />{" "}
                             </button>
-                            <button className="signup-apple-button">
+                            <button className="signup-apple-button" onClick={onClose}>
                                 Continue with Apple{" "}
                                 <FontAwesomeIcon icon={faApple} aria-hidden="true" />{" "}
                             </button>

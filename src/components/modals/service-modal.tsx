@@ -42,7 +42,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ service, onClose }) => {
                     <h2 id={titleId}>{service.title}</h2>
                     <p>{service.description}</p>
                     <p className="service-details">{service.details}</p>
-                    <button className="service-modal-button">{service.buttonText}</button>
+                    <button className="service-modal-button" onClick={onClose}>{service.buttonText}</button>
                 </div>
             </div>
         </div>,

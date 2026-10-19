@@ -71,7 +71,7 @@ const LogInModal: React.FC<logInModalProps> = ({ isLogInOpen, onClose }) => {
                     </div>
 
                     <div>
-                        <button className="signin-modal-button">
+                        <button className="signin-modal-button" onClick={onClose}>
                             Sign In
                             <FontAwesomeIcon icon={faArrowRight} />
                         </button>

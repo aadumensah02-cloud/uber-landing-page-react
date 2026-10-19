@@ -92,7 +92,7 @@ const DriveModal: React.FC<DriveModalProps> = ({ isDriveOpen, onClose }) => {
                         </div>
 
                         <div>
-                            <button className="drive-modal-button">Complete</button>
+                            <button className="drive-modal-button" onClick={onClose}>Complete</button>
                         </div>
                     </div>
                 </div>

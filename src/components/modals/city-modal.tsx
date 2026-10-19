@@ -55,7 +55,7 @@ const CityModal: React.FC<CityModalProps> = ({ isCityOpen, onClose }) => {
                     </div>
 
                     <div className="order-bottom">
-                        <button className="order-button">Order a ride</button>
+                        <button className="order-button" onClick={onClose}>Order a ride</button>
                     </div>
                 </div>
             </div>
