@@ -2,6 +2,7 @@ import React, { useId } from "react";
 import "../../styles/modal-styles/plan-modal.css";
 import { useModalFocus } from "../../useModalFocus";
 import { createPortal } from "react-dom";
+import useScrollLock from "../../useScrollLock";
 
 interface PlanModelProps {
     isPlanOpen: boolean;
@@ -9,6 +10,7 @@ interface PlanModelProps {
 }
 
 const PlanModal: React.FC<PlanModelProps> = ({ isPlanOpen, onClose }) => {
+    useScrollLock(isPlanOpen);
     const titleId = useId();
     // Hooks must run before the early return below (Rules of Hooks)
     const dialogRef = useModalFocus(isPlanOpen, onClose);

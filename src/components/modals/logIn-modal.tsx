@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faUser, faLock, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { createPortal } from "react-dom";
+import useScrollLock from "../../useScrollLock";
 
 interface logInModalProps {
     isLogInOpen: boolean;
@@ -12,6 +13,7 @@ interface logInModalProps {
 }
 
 const LogInModal: React.FC<logInModalProps> = ({ isLogInOpen, onClose }) => {
+    useScrollLock(isLogInOpen);
     const titleId = useId();
     // Hooks must run before the early return below (Rules of Hooks)
     const dialogRef = useModalFocus(isLogInOpen, onClose);

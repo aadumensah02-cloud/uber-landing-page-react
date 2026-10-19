@@ -1,3 +1,7 @@
+html {
+    scrollbar-gutter: stable;
+}
+
 @media (max-width: 1032px) {
     .hero-section-img,
     #nav-links,
@@ -124,3 +128,5 @@
         margin: 0 auto;
     }
 }
+
+

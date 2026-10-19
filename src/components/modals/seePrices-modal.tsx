@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/modal-styles/seePrices-modal.css";
 import { useModalFocus } from "../../useModalFocus";
 import { createPortal } from "react-dom";
+import useScrollLock from "../../useScrollLock";
 
 interface SeePricesModalProps {
     isOpen: boolean;
@@ -9,6 +10,7 @@ interface SeePricesModalProps {
 }
 
 const SeePricesModal: React.FC<SeePricesModalProps> = ({ isOpen, onClose }) => {
+    useScrollLock(isOpen);
     // Hooks must run before the early return below (Rules of Hooks)
     const dialogRef = useModalFocus(isOpen, onClose);
 

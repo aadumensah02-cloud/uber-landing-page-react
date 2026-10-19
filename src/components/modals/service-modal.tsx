@@ -3,6 +3,8 @@ import { createPortal } from "react-dom";
 import type { Service } from "../ServiceOptions";
 import { useModalFocus } from "../../useModalFocus";
 import "../../styles/modal-styles/service-modal.css";
+import useScrollLock from "../../useScrollLock";
+
 
 interface ServiceModalProps {
     service: Service | null; // null = modal closed
@@ -13,6 +15,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ service, onClose }) => {
     const titleId = useId();
     // Hooks must run before the early return below (Rules of Hooks)
     const dialogRef = useModalFocus(Boolean(service), onClose);
+    useScrollLock(Boolean(service));
 
     // Render nothing while closed so the modal mounts fresh on each open
     if (!service) return null;

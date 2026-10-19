@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/modal-styles/citymodal.css";
 import { useModalFocus } from "../../useModalFocus";
 import { createPortal } from "react-dom";
+import useScrollLock from "../../useScrollLock";
 
 interface CityModalProps {
     isCityOpen: boolean;
@@ -9,6 +10,7 @@ interface CityModalProps {
 }
 
 const CityModal: React.FC<CityModalProps> = ({ isCityOpen, onClose }) => {
+    useScrollLock(isCityOpen);
     // Hooks must run before the early return below (Rules of Hooks)
     const dialogRef = useModalFocus(isCityOpen, onClose);
 

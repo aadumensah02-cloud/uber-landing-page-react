@@ -2,6 +2,7 @@ import React, { useId } from "react";
 import "../../styles/modal-styles/drive-modal.css";
 import { useModalFocus } from "../../useModalFocus";
 import { createPortal } from "react-dom";
+import useScrollLock from "../../useScrollLock";
 
 interface DriveModalProps {
     isDriveOpen: boolean;
@@ -9,6 +10,7 @@ interface DriveModalProps {
 }
 
 const DriveModal: React.FC<DriveModalProps> = ({ isDriveOpen, onClose }) => {
+    useScrollLock(isDriveOpen);
     const titleId = useId();
     // Hooks must run before the early return below (Rules of Hooks)
     const dialogRef = useModalFocus(isDriveOpen, onClose);
