@@ -130,17 +130,8 @@
 @media (max-width: 1119px) {
   .login-section {
     grid-template-columns: 1fr;
-    /* flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    max-width: none; */
     gap: 24px;
   }
-
-  /* .log-in-text {
-    width: 100%;
-    max-width: 560px;            
-  } */
 
   .log-in-img {
     max-width: 420px;

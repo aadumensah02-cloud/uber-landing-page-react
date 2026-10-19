@@ -16,7 +16,6 @@
 }
 
 .section-reverse {
-    /* display: flex; */
     flex-direction: row-reverse;
 }
 
@@ -24,17 +23,9 @@
     font-size: 35px;
 }
 
-/* .section-reverse .section-text {
-    display: flex;
-    flex-direction: column;
-    padding-left: 50px;
-    padding-right: 150px;
-} */
-
 .section-reverse .section-text {
     padding-right: 0;
     padding-left: 70px;
-    /* padding-left: 150px; */
 }
 
 .section-icon {
@@ -115,7 +106,6 @@
         padding-left: 0;
         padding: 0;
         flex-direction: column;
-        /* margin-top: 20px; */
 
     }
 
@@ -130,7 +120,7 @@
     }
 
     .section-lower.actions-column .section-button {
-        width: 200px;   /* or 60% / auto; remove if you want it as wide as its text */
+        width: 200px;   
     }
 
     .section-icon {

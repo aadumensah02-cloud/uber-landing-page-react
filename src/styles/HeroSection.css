@@ -4,25 +4,12 @@
     flex: 1;
 }
 
-/* .hero-section-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 62px;
-    max-width: 1200px;
-    margin: 0 auto;
-} */
-
 .hero-section-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(24px, 5vw, 80px);
   align-items: center;
 }
-
-/* Placeholder row height; must match the fixed button's height in HeroSection */
 
 .header-button.fixed {
     position: fixed;
@@ -99,7 +86,6 @@
     border: none;
     border-radius: 20px;
     width: auto;
-    /* width: 130px; */
     padding: 15px 29px 14px 46px;
     background-color: #dadada;
     font-weight: bold;
@@ -192,6 +178,7 @@
     width: 530px;
     max-width: 530px;
     position: relative;
+    height: auto;
 }
 
 .select-wrapper {
@@ -335,7 +322,7 @@
         max-width: 100%;
         min-width: 0;
         margin: 0;
-        padding: 0 7px; /* equal gutters on both sides */
+        padding: 0 7px;
     }
 
     #hero-title {
@@ -343,7 +330,6 @@
         line-height: 1.15;
     }
 
-    /* Inputs: fill the row, text fits, icons stay inside */
     .hero-select,
     .location-input {
         width: 100%;
@@ -461,13 +447,6 @@
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1033px) {
   .hero-section-content { grid-template-columns: 1fr; }
-}
-
-/* cards: fill the whole row */
-.service-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
 }

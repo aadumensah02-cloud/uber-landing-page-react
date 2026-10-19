@@ -20,7 +20,7 @@
 
 .app-section {
   padding-inline: var(--edge);
-  max-width: none;       /* remove old max-width / width / margin hacks */
+  max-width: none;    
   margin-inline: 0;
   width: 100%;
 }

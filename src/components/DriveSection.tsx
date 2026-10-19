@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Section from "./common/Section";
-import "../styles/DriveSection.css";
 import driveImg from "../img/uber-img8.webp";
 import DriveModal from "./modals/drive-modal";
 

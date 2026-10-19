@@ -63,14 +63,13 @@ nav ul li select {
 .nav-actions {
     display: flex;
     align-items: center;
-    margin-left: auto;        /* pushes the whole group to the right edge of the header */
+    margin-left: auto;       
 }
 
 .nav-right-side-section {
     display: flex;
     align-items: center;
     gap: 20px;
-    /* padding-left: 350px; */
 }
 
 .nav-right-side-section a {
@@ -239,7 +238,7 @@ nav ul li,
 }
 
 .accordion-panel {
-    display: none; /* hidden until open */
+    display: none; 
     position: absolute;
     top: 100%;
     left: 0;
@@ -273,10 +272,6 @@ nav ul li,
 .close-button {
     display: none;
 }
-
-/* #nav-links {
-    display: none;
-} */
 
 @media (max-width: 768px) {
     header {
@@ -338,12 +333,12 @@ nav ul li,
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: 68px; /* match your navbar height */
+        top: 68px; 
         left: 0;
         width: 100%;
         height: calc(104vh - 70px);
         background: white;
-        color: black; /* or white, to match your theme */
+        color: black;
         padding: 24px;
         gap: 20px;
         overflow-y: auto;
