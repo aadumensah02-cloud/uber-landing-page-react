@@ -1,7 +1,9 @@
 .login-section {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-top: 120px;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .log-in-text {
@@ -9,8 +11,7 @@
     flex-direction: column;
     align-self: center;
     padding-right: 90px;
-    padding-left: 30px;
-    width: 45%;
+    width: 100%;
 }
 
 .log-in-text h2 {
@@ -124,5 +125,25 @@
     .log-in-section-button {
         width: 200px;
     }
+}
+
+@media (max-width: 1119px) {
+  .login-section {
+    grid-template-columns: 1fr;
+    /* flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: none; */
+    gap: 24px;
+  }
+
+  /* .log-in-text {
+    width: 100%;
+    max-width: 560px;            
+  } */
+
+  .log-in-img {
+    max-width: 420px;
+  }
 }
 

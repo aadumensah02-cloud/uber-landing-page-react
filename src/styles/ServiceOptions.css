@@ -1,12 +1,14 @@
+
 .service-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
+    width: 100%;
 }
 
 .service-options {
     padding-top: 30px;
-    padding-left: 30px;
+    padding-inline: var(--edge); 
 }
 
 .service-options h2 {
@@ -46,12 +48,6 @@ p {
         margin-top: 45px;
     }
 
-    .service-cards {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.7rem;
-        
-    }
-
     .service-options p{
         display: none;
     }
@@ -80,3 +76,16 @@ p {
         font-size: 13px;
     }
 }
+
+/* @media (min-width: 960px) and (max-width: 1032px) {
+    .service-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1978px) {
+    .service-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+} */

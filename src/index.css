@@ -1,0 +1,52 @@
+:root {
+  --container: 1280px;                      /* max content width */
+  --gutter: clamp(16px, 4vw, 48px);         /* side padding */
+  --edge: max(var(--gutter), calc((100% - var(--container)) / 2));
+}
+
+html, body { margin: 0; overflow-x: hidden; }
+
+
+
+.hero-section,
+.service-options,
+.login-section,
+.reserve-section,
+/* add the class names of your city, drive, business, app-download and footer sections */
+.city-section,
+.app-section,
+.footer {
+  padding-inline: var(--edge);
+  max-width: none;       /* remove old max-width / width / margin hacks */
+  margin-inline: 0;
+  width: 100%;
+}
+
+.hero-section-content,
+.hero-section-left,
+.text-section,
+.service-cards {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: 0;
+}
+
+/* hero: two columns on wide screens */
+.hero-section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 5vw, 80px);
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .hero-section-content { grid-template-columns: 1fr; }
+}
+
+/* cards: fill the whole row */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}

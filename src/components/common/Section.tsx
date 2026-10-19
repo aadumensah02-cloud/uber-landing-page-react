@@ -41,7 +41,7 @@ const Section: React.FC<SectionProps> = ({
                     </h2>
                     <p className="section-description">{description}</p>
 
-                    <div className={`Section-lower ${actionsClassName}`}>
+                    <div className={`section-lower ${actionsClassName}`}>
                         <button className="section-button" onClick={() => setIsDriveOpen(true)}>
                             {buttonText}
                         </button>

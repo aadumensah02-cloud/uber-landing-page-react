@@ -1,17 +1,22 @@
 .section {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin-top: 140px;
     align-items: center;
-    /* width: 78%; */
+    padding-left: 45px;
+    flex-wrap: wrap;
+    
 }
 
 .section-text {
-    padding-left: 30px;
+    flex: 1;
+    min-width: 0;
     padding-right: 70px;
 }
 
 .section-reverse {
+    /* display: flex; */
     flex-direction: row-reverse;
 }
 
@@ -19,21 +24,22 @@
     font-size: 35px;
 }
 
-.section-reverse .section-text {
+/* .section-reverse .section-text {
     display: flex;
     flex-direction: column;
     padding-left: 50px;
     padding-right: 150px;
-}
+} */
 
 .section-reverse .section-text {
-    padding-right: 20px;
-    padding-left: 220px;
-    padding-left: 150px;
+    padding-right: 0;
+    padding-left: 70px;
+    /* padding-left: 150px; */
 }
 
 .section-icon {
     width: 560px;
+    margin-top: 20px;
 }
 
 .section-description {
@@ -74,7 +80,7 @@
     display: flex;
 }
 
-.Section-lower {
+.section-lower {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -100,12 +106,16 @@
     }
 
     .section-description {
+        width: 100%;
         font-size: 1.0rem;
         padding: 0;
     }
 
-    .section {
-        margin-top: 20px;
+    .section , .section-reverse {
+        padding-left: 0;
+        padding: 0;
+        flex-direction: column;
+        /* margin-top: 20px; */
 
     }
 
@@ -113,14 +123,18 @@
         font-size: 13.3px;
     }
 
-    .Section-lower.actions-column {
+    .section-lower.actions-column {
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
     }
 
-    .Section-lower.actions-column .section-button {
+    .section-lower.actions-column .section-button {
         width: 200px;   /* or 60% / auto; remove if you want it as wide as its text */
+    }
+
+    .section-icon {
+        max-width: 100%;
     }
 }
 
@@ -130,3 +144,41 @@
         margin-left: 6px;
     }
 }
+
+
+@media (max-width: 1120px) {
+    .section, .section-reverse {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 80px;
+    }
+
+    .section-text,
+    .section-reverse .section-text {
+        width: 100%;
+        padding: 0;
+    }
+
+    .section-icon {
+        width: 100%;
+        max-width: 560px;
+    }
+
+    .section-description {
+        width: 75%;
+    }
+
+    .section-title {
+        width: 80%;
+    }
+}
+
+
+@media (min-width: 1454px) {
+    .section {
+        padding-inline: var(--edge);
+    }
+}
+
+

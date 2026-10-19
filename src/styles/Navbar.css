@@ -274,9 +274,9 @@ nav ul li,
     display: none;
 }
 
-#nav-links {
+/* #nav-links {
     display: none;
-}
+} */
 
 @media (max-width: 768px) {
     header {

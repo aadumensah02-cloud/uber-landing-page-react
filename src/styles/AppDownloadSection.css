@@ -1,16 +1,28 @@
 .app-section {
     background-color: #f6f6f6;
     padding: 66px 60px;
+    padding-left: 0;
+    padding-inline: var(--edge);
 }
 
 .qr-section {
     display: flex;
     flex-direction: row;
     gap: 40px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
 }
 
 .app-section h2 {
     font-size: 30 px;
+}
+
+.app-section {
+  padding-inline: var(--edge);
+  max-width: none;       /* remove old max-width / width / margin hacks */
+  margin-inline: 0;
+  width: 100%;
 }
 
 @media (max-width: 768px) {

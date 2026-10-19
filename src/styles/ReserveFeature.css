@@ -1,6 +1,6 @@
 .reserve-section {
     margin-top: 90px;
-    padding-left: 30px;
+    /* padding-left: 30px; */
 }
 
 .reserve-content {
@@ -283,6 +283,12 @@ hr {
 
     .reserve-input button {      /* use your Next button's real class */
         width: 100%;
+    }
+}
+
+@media (max-width: 1254px) {
+    .reserve-img {
+        display: none;
     }
 }
 

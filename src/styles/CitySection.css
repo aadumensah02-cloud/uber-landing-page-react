@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     margin-top: 97px;
-    padding-left: 30px;
 }
 
 .city-text {
@@ -92,6 +91,7 @@
 
     .city-text p {
        padding: 0;
+       width: 80%;
     }
 
     

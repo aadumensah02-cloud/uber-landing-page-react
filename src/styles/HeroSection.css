@@ -1,15 +1,10 @@
-.hero-section {
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 .hero-section-left {
     padding-left: 30px;
     flex: 1;
 }
 
-.hero-section-content {
+/* .hero-section-content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -18,6 +13,13 @@
     gap: 62px;
     max-width: 1200px;
     margin: 0 auto;
+} */
+
+.hero-section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 5vw, 80px);
+  align-items: center;
 }
 
 /* Placeholder row height; must match the fixed button's height in HeroSection */
@@ -456,4 +458,16 @@
     .header-button.fixed {
         position: static;
     }
+}
+
+
+@media (max-width: 1024px) {
+  .hero-section-content { grid-template-columns: 1fr; }
+}
+
+/* cards: fill the whole row */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
 }
