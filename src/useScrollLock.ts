@@ -4,11 +4,17 @@ export default function useScrollLock(locked: boolean) {
     useEffect(() => {
         if (!locked) return;
 
-        const previous = document.body.style.overflow;
-        document.body.style.overflow = "hidden";
+        const html = document.documentElement;
+        const body = document.body;
+        const prevHtml = html.style.overflow;
+        const prevBody = body.style.overflow;
+
+        html.style.overflow = "hidden";
+        body.style.overflow = "hidden";
 
         return () => {
-            document.body.style.overflow = previous;
+            html.style.overflow = prevHtml;
+            body.style.overflow = prevBody;
         };
     }, [locked]);
 }
