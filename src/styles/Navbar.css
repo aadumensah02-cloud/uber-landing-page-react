@@ -37,6 +37,20 @@ ul {
         transform 0.2s ease;
 }
 
+.nav-links:hover {
+    background-color: rgb(47, 45, 45);
+}
+
+@media (hover: hover) {
+    .nav-links:hover {
+        background-color: rgb(47, 45, 45);
+    }
+}
+
+.nav-links:active {
+    background-color: rgb(47, 45, 45);
+}
+
 .navbar-section {
     display: flex;
     align-items: center;
@@ -131,10 +145,6 @@ nav ul li select {
 select option {
     background-color: white;
     color: black;
-}
-
-.nav-links:hover {
-    background-color: rgb(47, 45, 45);
 }
 
 .nav-help-button {
@@ -348,6 +358,14 @@ nav ul li,
     #nav-links.mobile-open a {
         color: black;
         font-size: 1.3rem;
+    }
+
+    #nav-links.mobile-open a:hover {
+        background-color: transparent;
+    }
+
+    #nav-links.mobile-open a:active {
+        background-color: #eeeeee;
     }
 
     #nav-links.mobile-open .accordion-toggle {

@@ -101,13 +101,23 @@
 
     .log-in-section-button {
         font-size: 15px;
-        padding: 10px 15px;
+        padding: 12px 15px;
+        width: 30%;
     }
 
     .create-account-button {
         font-size: 15px;
+        margin-left: 0;
+        text-align: left;
+        margin-top: 10px;
+        
     }
-}
+
+    .log-in-button {
+        display: flex;
+        flex-direction: column;
+    }
+} 
 
 @media (max-width: 360px) {
     .log-in-button {

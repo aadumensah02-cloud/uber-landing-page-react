@@ -220,7 +220,7 @@
 .hero-select::before {
     content: "";
     position: absolute;
-    left: 35px;
+    left: 28px;
     top: 28px;
     height: 64px;
     width: 2px;
