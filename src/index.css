@@ -10,7 +10,9 @@ html, body { margin: 0; overflow-x: hidden; }
 
 .hero-section,
 .service-options,
+.login-section,
 .reserve-section,
+/* add the class names of your city, drive, business, app-download and footer sections */
 .city-section,
 .app-section,
 .footer {

@@ -93,6 +93,7 @@
 
     .login-section {
         margin-top: 40px;
+        padding-inline: 0;
     }
 
     .log-in-text p{
@@ -100,9 +101,9 @@
     }
 
     .log-in-section-button {
-        font-size: 15px;
-        padding: 12px 15px;
-        width: 30%;
+        width: auto;            
+        align-self: flex-start; 
+        padding: 12px 20px; 
     }
 
     .create-account-button {

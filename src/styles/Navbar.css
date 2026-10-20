@@ -402,4 +402,8 @@ nav ul li,
         font-size: 14px;
         white-space: nowrap;
     }
+
+    .header h1 {
+        font-weight: 300;
+    }
 }
