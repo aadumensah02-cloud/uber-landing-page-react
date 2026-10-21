@@ -23,7 +23,7 @@
     padding: 17px 35px;
     border-radius: 8px;
     position: relative;
-    height: 65vh;
+    height: auto;
     max-height: 100vh;     /* Scroll inside the modal instead of cutting off the Complete button */
     overflow-y: hidden;     /* Scroll inside the modal instead of cutting off the Complete button */
     width: 500px;

@@ -23,7 +23,7 @@
     padding: 45px 20px;
     border-radius: 8px;
     position: relative;
-    height: 65vh;
+    height: auto;
     max-height: 100vh;
     overflow-y: hidden;
     width: 460px;

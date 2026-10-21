@@ -149,3 +149,23 @@
   }
 }
 
+/* @media (max-width: 1197px) {
+    .create-account-button {
+      margin-left: 0;
+      align-self: flex-start;
+      padding: 0;
+    }
+} */
+
+@media (max-width: 1198px) {
+    .log-in-button {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .create-account-button {
+      margin-left: 0px;
+      margin-top: 10px;
+    }
+}
